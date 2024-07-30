@@ -14,9 +14,157 @@ header {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-  margin: auto;
+    margin: auto;
 }
 
+.paragraph__main{
+    position: relative;
+}
+.paragraph__main p {
+    font-weight: 400;
+    font-size: 15px;
+    position: absolute;
+    left: 60px;
+    top: 0;
+}
+.linha{
+    left: 0;
+    top: 25px;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+}
+.title{
+    font-size: 45px;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+
+.buttons__main{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    height: 60px;
+    gap: 20px;
+}
+
+.button__contact{
+    
+    background-color: #8873ef;
+    border: none;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.button__contact:hover{
+    background: #836df3;
+    color: white;
+}
+
+
+
+
+
+
+
+
+.portfolio{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+ /* github */
+.github__div{
+    cursor:pointer;
+    width: 90px;
+    height: 40px;
+   display: flex;
+   align-items: center;
+
+}
+.github__div::after{
+    content: '';
+    height: 1.5px;
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    left: 34%;
+    border-radius: 1rem;
+    width: 0px;
+}
+
+.github__div:hover::after{
+    content: '';
+    height: 1.5px;
+    position: absolute;
+    background-color: black;
+    border-radius: 1rem;
+    width: 60px;
+    transition: all .3s;
+}
+
+.github__div:hover .seta{
+    bottom: 20px;
+    left: 44%;
+    rotate: 0deg;
+}
+/* seta */
+.seta{
+    width: 15px;
+    height: 1.5px;
+    position: absolute;
+    background-color: black;
+    left: 46%;
+    bottom: 25px;
+    border-radius: 1rem;
+    rotate: -45deg;
+    transition: all .3s;
+}
+.seta::after{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    width: 7px;
+    right: -.9;
+    top: -2.1;
+    position: absolute;
+    height: 1.5px;
+    rotate: 45deg;
+    border-radius: 1rem;
+}
+.seta::before{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    width: 7px;
+    right: -.8;
+    top: 2.1;
+    position: absolute;
+    height: 1.5px;
+    rotate: -45deg;
+    border-radius: 1rem;
+}
+/* seta */
+
+
+.max__width{
+    max-width: 1200px;
+    margin: auto;
+}
+.div__intro{
+    max-width: 500px;
+    position: relative;
+}
+
+
+
+/* header */
 .header__inicio {
     font-weight: 800;
     font-size: 22px;
