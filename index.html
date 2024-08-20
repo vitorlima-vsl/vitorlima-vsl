@@ -9,30 +9,32 @@
 
 <body>
     <header>
-        <div class="header__inicio">
-            <img class="logo" src="img/logo_temp.png" alt="V com tio na lateral">
-            <div>
-                <h3>Vitor</h3>
-                <h3>Lima</h3>
+        <nav>
+            <div class="header__inicio">
+                <img class="logo" src="img/logo_temp.png" alt="V com tio na lateral">
+                <div>
+                    <h3>Vitor</h3>
+                    <h3>Lima</h3>
+                </div>
             </div>
-        </div>
-        <div class="header__meio">
-            <div class="header__a">
-                <a href="#main-section">Sobre</a>
+            <div class="header__meio">
+                <div class="header__a">
+                    <a href="#main-section">Sobre</a>
+                </div>
+                <div class="header__a">
+                    <a href="#services-section">Serviços</a> <!-- Example for future use -->
+                </div>
+                <div class="header__a">
+                    <a href="#projects-section">Projetos</a> <!-- Example for future use -->
+                </div>
             </div>
-            <div class="header__a">
-                <a href="#services-section">Serviços</a> <!-- Example for future use -->
+            <div class="header__fim">
+                <div class="header__search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                    <input type="text" placeholder="Buscar">
+                </div>
             </div>
-            <div class="header__a">
-                <a href="#projects-section">Projetos</a> <!-- Example for future use -->
-            </div>
-        </div>
-        <div class="header__fim">
-            <div class="header__search">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-                <input type="text" placeholder="Buscar">
-            </div>
-        </div>
+        </nav>
     </header>
     <section class="max__width" id="main-section">
         <div class="div__intro">
@@ -49,10 +51,14 @@
                     <a class="portfolio" href="#">Github</a>
                     <div class="seta"></div>
                 </div>
-               
             </div>
         </div>
-        <div></div>
+        <div class="foto__main">
+            <img src="img/Vitor.png" alt="Foto de Vitor Lima">
+            <div class="foto__quadrado foto__quadrado-animation"> 
+            </div>
+            <div class="foto__mascara"/>
+        </div>
     </section>
     <footer></footer>
 </body>
