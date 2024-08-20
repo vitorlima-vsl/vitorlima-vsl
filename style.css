@@ -95,7 +95,7 @@ nav {
     position: absolute;
     background-color: black;
     bottom: 20px;
-    left: 36%;
+    left: 3%;
     border-radius: 1rem;
     width: 0px;
 }
@@ -156,7 +156,8 @@ nav {
     max-width: 1200px;
     margin: auto;
 }
-.div__intro{
+.div__intro{ 
+    margin-top: 60px;
     max-width: 500px;
     position: relative;
 }
@@ -250,19 +251,18 @@ nav {
     position: relative;
     object-fit: cover;
     border-radius: 1rem;
-    margin-right: 100px;
 }
 .foto__main img{
-    width: 380px;
-    height: 350px;
+    width: 480px;
+    height: 400px;
 }
 .foto__quadrado{
     position: absolute;
     z-index: -10;
-    top: 80px;
+    top: 110px;
     left: 70px;
-    width: 230px;
-    height: 305px;
+    width: 310px;
+    height: 350px;
     border-radius: 1rem;
     background-color: #fcda69;
     display: flex;
@@ -283,10 +283,10 @@ nav {
 }
 .foto__mascara{
     position: absolute;
-    top:  300px;
-    left: 110px;
-    width: 200px;
-    height: 50px;
+    top:  350px;
+    left: 130px;
+    width: 260px;
+    height: 60px;
     border-radius: 1rem;
     background: linear-gradient(to top, #fcda69 90%, transparent);
     display: flex;
@@ -299,8 +299,8 @@ nav {
     position: absolute;
     top: -20px;
     left: -8px;
-    width: 110px;
-    height: 50px;
+    width: 210px;
+    height: 60px;
     background: linear-gradient(to top, #fcda69 70%, transparent);
     border-radius: 1rem;
     rotate: 35deg;
@@ -309,12 +309,12 @@ nav {
     content: '';
     position: absolute;
     top: -20px;
-    right: -8px;
-    width: 110px;
-    height: 50px;
+    right: -25px;
+    width: 210px;
+    height: 60px;
     background: linear-gradient(to top, #fcda69 70%, transparent);
     border-radius: 1rem;
-    rotate: -35deg;
+    rotate: -30deg;
 }
 
 #main-section{
