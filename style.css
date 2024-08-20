@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 /* navbar */
-header {
+nav {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -78,7 +78,6 @@ header {
     text-decoration: none;
     color: black;
     font-weight: bold;
-
 }
 
  /* github */
@@ -96,7 +95,7 @@ header {
     position: absolute;
     background-color: black;
     bottom: 20px;
-    left: 34%;
+    left: 36%;
     border-radius: 1rem;
     width: 0px;
 }
@@ -113,7 +112,7 @@ header {
 
 .github__div:hover .seta{
     bottom: 20px;
-    left: 44%;
+    left: 46%;
     rotate: 0deg;
 }
 /* seta */
@@ -122,7 +121,7 @@ header {
     height: 1.5px;
     position: absolute;
     background-color: black;
-    left: 46%;
+    left: 48%;
     bottom: 25px;
     border-radius: 1rem;
     rotate: -45deg;
@@ -244,4 +243,81 @@ header {
 }
 .header__fim svg{
     width: 15px;
+}
+
+
+.foto__main{
+    position: relative;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-right: 100px;
+}
+.foto__main img{
+    width: 380px;
+    height: 350px;
+}
+.foto__quadrado{
+    position: absolute;
+    z-index: -10;
+    top: 80px;
+    left: 70px;
+    width: 230px;
+    height: 305px;
+    border-radius: 1rem;
+    background-color: #fcda69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-23deg);
+
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 10px 10px 5px lightblue;
+    }
+    100% {
+        box-shadow: 10px 10px 10px rgb(204, 173, 230);
+    }
+}
+.foto__mascara{
+    position: absolute;
+    top:  300px;
+    left: 110px;
+    width: 200px;
+    height: 50px;
+    border-radius: 1rem;
+    background: linear-gradient(to top, #fcda69 90%, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto__mascara::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -8px;
+    width: 110px;
+    height: 50px;
+    background: linear-gradient(to top, #fcda69 70%, transparent);
+    border-radius: 1rem;
+    rotate: 35deg;
+}
+.foto__mascara::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -8px;
+    width: 110px;
+    height: 50px;
+    background: linear-gradient(to top, #fcda69 70%, transparent);
+    border-radius: 1rem;
+    rotate: -35deg;
+}
+
+#main-section{
+    display: flex;
+    justify-content: space-between;
 }
