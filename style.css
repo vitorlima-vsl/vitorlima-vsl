@@ -43,6 +43,7 @@ nav {
 
 
 .buttons__main{
+    position: relative;
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -87,7 +88,6 @@ nav {
     height: 40px;
    display: flex;
    align-items: center;
-
 }
 .github__div::after{
     content: '';
@@ -255,12 +255,13 @@ nav {
 .foto__main img{
     width: 480px;
     height: 400px;
+    
 }
 .foto__quadrado{
     position: absolute;
     z-index: -10;
     top: 110px;
-    left: 70px;
+    left: 95px;
     width: 310px;
     height: 350px;
     border-radius: 1rem;
@@ -320,4 +321,63 @@ nav {
 #main-section{
     display: flex;
     justify-content: space-between;
+   min-height: 62vh;
+}
+#projects-section{
+    background-color: #fcda69;
+    min-height: 68vh;
+    display: flex;
+    padding-top: 98px;
+}
+.project__div-bg-yellow {
+    height: fit-content;
+}
+
+.project__grid-1{
+    margin-bottom: 24px;
+    margin-right: 25px;
+}
+.project__grid-2{
+    margin-top: 142px;
+    margin-inline: 25px;
+}
+.project__grid-3{
+    margin-top: 67px;
+    margin-inline: 25px;
+
+}
+
+
+.project__titulo{
+    font-size: 56px;
+    margin: 0;
+    margin-bottom: 75px;    
+}
+
+.bg__yellow{
+    background-color: #fcda69;
+}
+
+.project__card-linha{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+   
+}
+.project__card-titulo{
+    font-size: 25px;
+    font-weight: 600;
+}
+.project__card-titulo p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.project__card-container{
+  max-width: 350px;
+  
+}
+.project__card{
+    width: 350px;
+    height: 450px;
+    background: rgb(0, 0, 0);
 }
