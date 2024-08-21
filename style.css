@@ -321,6 +321,7 @@ nav {
 #main-section{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
    min-height: 62vh;
 }
 #projects-section{
