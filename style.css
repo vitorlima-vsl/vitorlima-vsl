@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+@keyframes pulse {
+    0% {
+        box-shadow: 10px 10px 5px lightblue;
+    }
+    100% {
+        box-shadow: 10px 10px 10px rgb(204, 173, 230);
+    }
+}
+
+@keyframes pulse1 {
+    0% {
+        box-shadow: 10px 10px 5px lightblue;
+    }
+    100% {
+        box-shadow: 0px 30px 10px rgb(204, 173, 230);
+    }
+}
+@keyframes pulse2 {
+    0% {
+        box-shadow: 10px 10px 5px lightblue;
+    }
+    100% {
+        box-shadow: 0px 30px 10px rgb(204, 173, 230);
+    }
+}
+
+@keyframes pulse3 {
+    0% {
+        box-shadow: 8px 30px 5px #85e77c;
+    }
+    100% {
+        box-shadow: 0px 30px 10px rgb(173, 230, 227);
+    }
+}
+
+
+
+
+
 /* elementos nativos */
 html {
     scroll-behavior: smooth;
@@ -274,14 +313,7 @@ nav {
     animation: pulse 1s infinite alternate;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 10px 10px 5px lightblue;
-    }
-    100% {
-        box-shadow: 10px 10px 10px rgb(204, 173, 230);
-    }
-}
+
 .foto__mascara{
     position: absolute;
     top:  350px;
@@ -330,8 +362,9 @@ nav {
     display: flex;
     padding-top: 98px;
 }
-.project__div-bg-yellow {
-    height: fit-content;
+.border__radius-10{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
 
 .project__grid-1{
@@ -377,8 +410,103 @@ nav {
   max-width: 350px;
   
 }
-.project__card{
+/* .project__card{
     width: 350px;
     height: 450px;
     background: rgb(0, 0, 0);
+} */
+
+
+
+
+
+/* card-project */
+.post-card {
+    width: 320px;
+    height: 200px;
+    background: lightgrey;
+    background-color: rgb(24 27 32);
+    border: 1px solid rgb(84 90 106);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    transition: all .35s ease-in;
 }
+
+.post-card-animation3 {
+    animation: pulse3 1.3s infinite alternate ease-in;
+}
+
+.post-card:hover {
+    cursor: pointer;
+    height: 450px;
+    animation: none; /* Remove animation on hover */
+}
+
+.post-card:hover .post-card-animation3 {
+    animation: none; /* Remove animation on hover */
+}
+  
+  .avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
+  }
+  
+  .title {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .35s ease-in;
+  }
+  
+  .title:hover {
+    text-decoration: underline blueviolet;
+  }
+  
+  .datetime {
+    font-size: 12px;
+    color: rgb(168 179 207);
+    margin: 10px 0;
+  }
+  
+  .image-preview {
+    flex: 1;
+    min-height: 170px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: blueviolet;
+    background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
+    margin-bottom: 4px;
+
+  }
+  
+  
+  .portal__aplicacoes{
+
+    width: 100%;
+    border-radius: 20px;
+    background-color: blueviolet;
+    margin-bottom: 4px;
+  }
+.portal__aplicacoes2{
+        width: 100%;
+        height: 0;
+        border-radius: 20px;
+}
+.post-card:hover .portal__aplicacoes{
+   height: auto;
+    transition: all .3s ease-in;
+}
+.post-card:hover .portal__aplicacoes2{
+    min-height: 50%;
+    transition: all 1s ease-in;
+    
+  }
