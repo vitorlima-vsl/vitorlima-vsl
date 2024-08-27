@@ -44,6 +44,10 @@
 
 /* Add CSS rules inside the media query */
 @media (max-width: 1199px) {
+    nav{
+     margin-inline: 10% !important;
+       
+    }
     #main-section{
      margin: 10% !important;
     }
@@ -98,7 +102,7 @@ nav {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: auto;
+    margin-inline: auto;
 }
 
 .paragraph__main {
