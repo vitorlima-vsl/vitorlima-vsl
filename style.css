@@ -4,6 +4,7 @@
     0% {
         box-shadow: 10px 10px 5px lightblue;
     }
+
     100% {
         box-shadow: 10px 10px 10px rgb(204, 173, 230);
     }
@@ -13,14 +14,17 @@
     0% {
         box-shadow: 10px 10px 5px lightblue;
     }
+
     100% {
         box-shadow: 0px 30px 10px rgb(204, 173, 230);
     }
 }
+
 @keyframes pulse2 {
     0% {
         box-shadow: 10px 10px 5px lightblue;
     }
+
     100% {
         box-shadow: 0px 30px 10px rgb(204, 173, 230);
     }
@@ -30,10 +34,49 @@
     0% {
         box-shadow: 8px 30px 5px #85e77c;
     }
+
     100% {
         box-shadow: 0px 30px 10px rgb(173, 230, 227);
     }
 }
+
+
+
+/* Add CSS rules inside the media query */
+@media (max-width: 1199px) {
+    #main-section{
+     margin: 10% !important;
+    }
+    #projects-section {
+        flex-wrap: wrap;
+        margin-inline: 10% !important;
+    }
+    .project__grid-1 {
+        margin-bottom: inherit;
+        width: 350px;
+    }
+    
+    .project__grid-2 {
+        margin-bottom: inherit;
+        width: 350px;
+        margin-inline: 0;
+    }
+    
+    .project__grid-3 {
+        margin-bottom: inherit;
+        margin-inline: 0;
+        width: 350px;
+
+    }
+
+    #projects-div-bg{
+        
+    }
+    
+    
+}
+
+
 
 
 
@@ -45,9 +88,11 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Manrope', sans-serif;
     margin: 0;
 }
+
 /* navbar */
 nav {
     display: flex;
@@ -56,9 +101,10 @@ nav {
     margin: auto;
 }
 
-.paragraph__main{
+.paragraph__main {
     position: relative;
 }
+
 .paragraph__main p {
     font-weight: 400;
     font-size: 15px;
@@ -66,7 +112,8 @@ nav {
     left: 60px;
     top: 0;
 }
-.linha{
+
+.linha {
     left: 0;
     top: 25px;
     width: 30px;
@@ -74,14 +121,15 @@ nav {
     background-color: black;
     position: absolute;
 }
-.titulo{
+
+.titulo {
     font-size: 45px;
     margin-top: 80px;
     margin-bottom: 0;
 }
 
 
-.buttons__main{
+.buttons__main {
     position: relative;
     display: flex;
     align-items: center;
@@ -90,8 +138,8 @@ nav {
     gap: 20px;
 }
 
-.button__contact{
-    
+.button__contact {
+
     background-color: #8873ef;
     border: none;
     width: 150px;
@@ -102,7 +150,8 @@ nav {
     color: white;
     cursor: pointer;
 }
-.button__contact:hover{
+
+.button__contact:hover {
     background: #836df3;
     color: white;
 }
@@ -114,34 +163,35 @@ nav {
 
 
 
-.portfolio{
+.portfolio {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
- /* github */
-.github__div{
-    cursor:pointer;
+/* github */
+.github__div {
+    position: relative;
+    cursor: pointer;
     width: 90px;
     height: 40px;
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
-.github__div::after{
+
+.github__div::after {
     content: '';
-    height: 1.5px;
+    height: 2px;
     position: absolute;
     background-color: black;
-    bottom: 20px;
-    left: 36%;
+    bottom: 0;
+    left: 0;
     border-radius: 1rem;
     width: 0px;
 }
 
-.github__div:hover::after{
+.github__div:hover::after {
     content: '';
-    height: 1.5px;
     position: absolute;
     background-color: black;
     border-radius: 1rem;
@@ -149,53 +199,58 @@ nav {
     transition: all .3s;
 }
 
-.github__div:hover .seta{
-    bottom: 20px;
-    left: 46%;
+.github__div:hover .seta {
+    bottom: 0;
+    
     rotate: 0deg;
 }
+
 /* seta */
-.seta{
+.seta {
     width: 15px;
-    height: 1.5px;
+    height: 2px;
     position: absolute;
     background-color: black;
-    left: 48%;
-    bottom: 25px;
+   right: 20px;
+   bottom: 50%;
+
     border-radius: 1rem;
     rotate: -45deg;
     transition: all .3s;
 }
-.seta::after{
+
+.seta::after {
     content: '';
     background-color: rgb(0, 0, 0);
     width: 7px;
     right: -.9;
     top: -2.1;
     position: absolute;
-    height: 1.5px;
+    height: 2px;
     rotate: 45deg;
     border-radius: 1rem;
 }
-.seta::before{
+
+.seta::before {
     content: '';
     background-color: rgb(0, 0, 0);
     width: 7px;
     right: -.8;
     top: 2.1;
     position: absolute;
-    height: 1.5px;
+    height: 2px;
     rotate: -45deg;
     border-radius: 1rem;
 }
+
 /* seta */
 
 
-.max__width{
+.max__width {
     max-width: 1200px;
-    margin: auto;
 }
-.div__intro{ 
+
+.div__intro {
     margin-top: 60px;
     max-width: 500px;
     position: relative;
@@ -236,26 +291,29 @@ nav {
     gap: 20px;
     align-items: center;
 }
+
 .header__meio a {
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-size: 16px;
 }
-.header__a{
+
+.header__a {
     height: 40px;
     position: relative;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
+
 .header__a:hover::after {
     position: absolute;
     width: 20px;
     background-color: black;
     height: 2px;
-    content:'';
+    content: '';
     bottom: 0;
-  
+
 }
 
 .header__fim {
@@ -263,7 +321,8 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.header__search{
+
+.header__search {
     height: 30px;
     width: 100px;
     border: 2px solid rgb(202, 202, 202);
@@ -272,31 +331,36 @@ nav {
     display: flex;
     padding: 0 10px;
 }
+
 .header__search:focus-within {
     border: 2px solid rgb(133, 133, 133);
 }
+
 .header__search input {
     border: none;
     width: 100%;
     height: 100%;
     outline: none;
 }
-.header__fim svg{
+
+.header__fim svg {
     width: 15px;
 }
 
 
-.foto__main{
+.foto__main {
     position: relative;
     object-fit: cover;
     border-radius: 1rem;
 }
-.foto__main img{
+
+.foto__main img {
     width: 480px;
     height: 400px;
-    
+
 }
-.foto__quadrado{
+
+.foto__quadrado {
     position: absolute;
     z-index: -10;
     top: 110px;
@@ -314,9 +378,9 @@ nav {
 }
 
 
-.foto__mascara{
+.foto__mascara {
     position: absolute;
-    top:  350px;
+    top: 350px;
     left: 130px;
     width: 260px;
     height: 60px;
@@ -327,7 +391,7 @@ nav {
     align-items: center;
 }
 
-.foto__mascara::after{
+.foto__mascara::after {
     content: '';
     position: absolute;
     top: -20px;
@@ -338,7 +402,8 @@ nav {
     border-radius: 1rem;
     rotate: 35deg;
 }
-.foto__mascara::before{
+
+.foto__mascara::before {
     content: '';
     position: absolute;
     top: -20px;
@@ -350,67 +415,79 @@ nav {
     rotate: -30deg;
 }
 
-#main-section{
+#main-section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
-   min-height: 62vh;
+    min-height: 62vh;
+    margin: auto;
 }
-#projects-section{
+
+#projects-section {
+
     background-color: #fcda69;
     height: max-content;
     display: flex;
     padding-top: 98px;
     padding-bottom: 60px;
+    margin: auto;
+   
 }
-.border__radius-10{
+
+.border__radius-10 {
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
 }
 
-.project__grid-1{
+.project__grid-1 {
     margin-bottom: 24px;
     margin-right: 25px;
 }
-.project__grid-2{
+
+.project__grid-2 {
     margin-top: 142px;
     margin-inline: 25px;
 }
-.project__grid-3{
+
+.project__grid-3 {
     margin-top: 67px;
     margin-inline: 25px;
 
 }
 
 
-.project__titulo{
+.project__titulo {
     font-size: 56px;
     margin: 0;
-    margin-bottom: 75px;    
+    margin-bottom: 75px;
 }
 
-.bg__yellow{
+.bg__yellow {
     background-color: #fcda69;
 }
 
-.project__card-linha{
+.project__card-linha {
     width: 100%;
     height: 2px;
     background-color: black;
-   
+
 }
-.project__card-titulo{
+
+.project__card-titulo {
     font-size: 25px;
     font-weight: 600;
 }
-.project__card-titulo p{
+
+.project__card-titulo p {
     font-size: 18px;
     font-weight: 500;
 }
-.project__card-container{
-  max-width: 350px;
-  
+
+.project__card-container {
+    max-width: 330px;
+
 }
+
 /* .project__card{
     width: 350px;
     height: 450px;
@@ -446,15 +523,15 @@ nav {
 
 
 
-  .avatar {
+.avatar {
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
-  }
-  
-  
-  .title {
+    background-image: linear-gradient(to top left, blueviolet, rgb(73, 31, 112));
+}
+
+
+.title {
     font-size: 20px;
     line-height: 22px;
     font-weight: 600;
@@ -462,31 +539,31 @@ nav {
     color: #fff;
     text-decoration: none;
     transition: all .35s ease-in;
-  }
-  
-  .title:hover {
+}
+
+.title:hover {
     text-decoration: underline blueviolet;
-  }
-  
-  .datetime {
+}
+
+.datetime {
     font-size: 12px;
     color: rgb(168 179 207);
     margin: 10px 0;
-  }
-  
-  .card__dashboard{
-    border-radius: 6px;
-  }
+}
 
-  .portal__aplicacoes{
+.card__dashboard {
+    border-radius: 6px;
+}
+
+.portal__aplicacoes {
     width: 100%;
     border-radius: 6px;
     background-color: blueviolet;
     margin-bottom: 4px;
-  }
+}
 
 
-    .post-card:hover .portal__aplicacoes{
-        
-       height: auto;
-    }
+.post-card:hover .portal__aplicacoes {
+
+    height: auto;
+}
