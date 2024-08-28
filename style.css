@@ -46,17 +46,20 @@
 @media (max-width: 1199px) {
     nav{
      margin-inline: 10% !important;
-       
     }
+
     #main-section{
      margin: 10% !important;
+     min-height: inherit !important;
     }
     #projects-section {
         flex-wrap: wrap;
         margin-inline: 10% !important;
+        justify-content: space-between;
     }
     .project__grid-1 {
         margin-bottom: inherit;
+        margin-right: inherit;
         width: 350px;
     }
     
@@ -68,7 +71,7 @@
     
     .project__grid-3 {
         margin-bottom: inherit;
-        margin-inline: 0;
+        margin-inline: 0 !important;
         width: 350px;
 
     }
