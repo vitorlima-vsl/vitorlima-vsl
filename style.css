@@ -52,7 +52,7 @@
      margin: 10% !important;
      min-height: inherit !important;
     }
-    #projects-section {
+    #projects-section{
         flex-wrap: wrap;
         margin-inline: 10% !important;
         justify-content: space-between;
@@ -76,13 +76,75 @@
 
     }
 
-    #projects-div-bg{
-        
-    }
+ 
     
     
 }
 
+@media (max-width: 768px){
+    #main-section{
+        flex-direction: column-reverse;
+        margin: 10% !important;
+    }
+
+   
+    .paragraph__main p {
+        font-size: 14px !important;
+
+    }
+
+
+    .titulo {
+        font-size: 30px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0;
+    }
+
+
+
+    .foto__main  {
+       display: none;
+    }
+    #projects-div-bg{
+        border-radius: 0;
+    }
+    #projects-section{
+        padding: 0!important;
+        margin-inline: 0 !important;
+        justify-content: space-between;
+    }
+    .project__card-titulo {
+        font-size: 20px !important;
+    }
+    .project__card-titulo p {
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+    .project__titulo{
+        font-size: 30px !important;
+        margin-bottom: 10px !important;
+    }
+
+
+    .project__grid-1 {
+        margin-bottom: 0 !important;
+        margin-inline: 2% !important;
+    }
+    .project__grid-2 {
+        margin-top: 10% !important;
+        margin-bottom: 0 !important;
+       margin-inline: 2% !important;
+    }
+    .project__grid-3 {
+        margin-top: 10% !important;
+        margin-bottom: 0 !important;
+       margin-inline: 2% !important;
+    }
+   header{
+    display: none;
+   }
+
+}
 
 
 
@@ -140,7 +202,7 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 120px;
     height: 60px;
     gap: 20px;
 }
@@ -356,15 +418,12 @@ nav {
 
 
 .foto__main {
-    position: relative;
-    object-fit: cover;
-    border-radius: 1rem;
+  position: relative;
 }
 
 .foto__main img {
     width: 480px;
     height: 400px;
-
 }
 
 .foto__quadrado {
@@ -431,15 +490,20 @@ nav {
 }
 
 #projects-section {
-
     background-color: #fcda69;
     height: max-content;
     display: flex;
     padding-top: 98px;
     padding-bottom: 60px;
     margin: auto;
-   
+    margin-top: 20px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
+#projects-div-bg{
+    position: relative;  
+}
+
 
 .border__radius-10 {
     border-top-left-radius: 10%;
@@ -468,6 +532,7 @@ nav {
     margin: 0;
     margin-bottom: 75px;
 }
+
 
 .bg__yellow {
     background-color: #fcda69;
