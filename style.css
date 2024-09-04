@@ -94,11 +94,14 @@
 
 @media (max-width: 768px){
     #main-section{
-        flex-direction: column-reverse;
-        margin: 10% !important;
+        margin-top: 0 !important;
+        margin-inline: 10% !important;
     
     }
 
+    .buttons__main{
+       margin-top: 25px !important;
+    }
     #services-section{
        flex-direction: column;
     }
