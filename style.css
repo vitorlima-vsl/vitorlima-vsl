@@ -168,10 +168,10 @@
 #services-section{
    margin-inline: auto;
    display: flex;
+   gap: 25px;
    justify-content: space-between;
    height: 100vh;
-   padding-top: 80px;
-   /* tirar oq ta acima */
+  
 }
 
 
