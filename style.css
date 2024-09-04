@@ -47,10 +47,15 @@
     nav{
      margin-inline: 10% !important;
     }
-
+    #services-section{
+        padding-top: 5% !important;
+        margin-inline: 10% !important;
+        /* tirar oq ta acima */
+    }
+     
     #main-section{
      margin: 10% !important;
-     min-height: inherit !important;
+    
     }
     #projects-section{
         flex-wrap: wrap;
@@ -61,6 +66,8 @@
         margin-bottom: inherit;
         margin-right: inherit;
         width: 350px;
+  
+
     }
     
     .project__grid-2 {
@@ -81,16 +88,26 @@
     
 }
 
+
+
+
+
 @media (max-width: 768px){
     #main-section{
         flex-direction: column-reverse;
         margin: 10% !important;
+    
     }
 
+    #services-section{
+       flex-direction: column;
+    }
    
-    .paragraph__main p {
-        font-size: 14px !important;
+    
+   
 
+    .services__flex__col{
+        width: 40%;
     }
 
 
@@ -121,24 +138,24 @@
         font-weight: 500;
     }
     .project__titulo{
-        font-size: 30px !important;
+        
         margin-bottom: 10px !important;
     }
 
 
     .project__grid-1 {
         margin-bottom: 0 !important;
-        margin-inline: 2% !important;
+        margin-inline: 10% !important;
     }
     .project__grid-2 {
         margin-top: 10% !important;
         margin-bottom: 0 !important;
-       margin-inline: 2% !important;
+       margin-inline: 10% !important;
     }
     .project__grid-3 {
         margin-top: 10% !important;
-        margin-bottom: 0 !important;
-       margin-inline: 2% !important;
+        margin-bottom: 10% !important;
+       margin-inline: 10% !important;
     }
    header{
     display: none;
@@ -149,7 +166,7 @@
 
 
 #services-section{
-   margin-inline: 10%;
+   margin-inline: auto;
    display: flex;
    justify-content: space-between;
    height: 100vh;
@@ -200,7 +217,11 @@ nav {
     font-size: 14px;
     
 }
-
+.services__h4{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .services__h3 {
     font-size: 25px;
@@ -213,23 +234,26 @@ nav {
     margin:0;
 }
 
+.flex{
+    display: flex;
+}
+
 
 .flex__col{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    
+}
+.services__flex__col{
+    display: flex;
+    flex-direction: column;
 }
 
-.paragraph__main {
-    position: relative;
-}
 
-.paragraph__main p {
+
+.paragraph {
     font-weight: 400;
-    font-size: 15px;
-    position: absolute;
-    left: 60px;
-    top: 0;
+    font-size: 16px;
 }
 
 .linha {
@@ -579,7 +603,7 @@ nav {
 
 
 .project__titulo {
-    font-size: 56px;
+    font-size: 45px;
     margin: 0;
     margin-bottom: 75px;
 }
@@ -623,8 +647,8 @@ nav {
 
 /* card-project */
 .post-card {
-    width: 320px;
-    height: 200px;
+    width: 250px;
+    height: 170px;
     background: lightgrey;
     background-color: rgb(24 27 32);
     border: 1px solid rgb(84 90 106);
@@ -633,6 +657,7 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    
     transition: all .35s ease-in;
 }
 
@@ -640,7 +665,7 @@ nav {
 
 .post-card:hover {
     cursor: pointer;
-    height: 270px;
+    height: 250px;
 
 }
 
@@ -681,7 +706,7 @@ nav {
 .portal__aplicacoes {
     width: 100%;
     border-radius: 6px;
-    background-color: blueviolet;
+   
     margin-bottom: 4px;
 }
 
