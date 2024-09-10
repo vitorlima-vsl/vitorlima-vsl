@@ -681,6 +681,7 @@ nav {
     height: 300px;
     margin-inline: auto;
     position: relative;
+    z-index: 0;
   
 }
 
@@ -789,3 +790,70 @@ footer{
     font-size: 18px;
     padding-top: 5px;
 }
+
+.contato__div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    margin-left: 10%;
+    margin-top: 65px;
+}
+.contato__div svg{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+.contato__div h4{
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #c1f053;
+}
+.contato__div div{
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+}
+.contato__div div:hover a::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+}
+.contato__div a{
+    position: relative;
+    
+    font-size: 16px;
+    text-decoration: none;
+}
+.contato__div a::after{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 20px;
+    height: 2px;
+    transition: all .3s;
+}
+.contato__div a:visited{
+    color: #ffffff;
+}
+.github::after{
+    background-color: rgb(43, 129, 2);
+}
+
+.email::after{
+   background-color: #c1f053;
+}
+
+.linkedin::after{
+    background-color: rgb(26, 207, 198);
+
+}
+.instagram::after{
+    background-color:  rgb(30, 97, 151);
+}
+:root {
+    --fillSvg: #ffffff;
+    --white: #faf0e6;
+  }
