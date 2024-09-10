@@ -286,6 +286,7 @@ nav {
 }
 
 .portfolio {
+    position: relative;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -293,7 +294,7 @@ nav {
 
 /* github */
 .github__div {
-  position: relative;
+ 
   cursor: pointer;
   width: 90px;
   height: 40px;
@@ -301,7 +302,8 @@ nav {
   align-items: center;
 }
 
-.github__div::after {
+
+.portfolio::after {
   content: "";
   height: 2px;
   position: absolute;
@@ -312,11 +314,12 @@ nav {
   width: 0px;
 }
 
-.github__div:hover::after {
+.github__div:hover .portfolio::after {
   content: "";
   position: absolute;
   background-color: black;
   border-radius: 1rem;
+
   width: 60px;
   transition: all 0.3s;
 }
@@ -333,8 +336,8 @@ nav {
   height: 2px;
   position: absolute;
   background-color: black;
-  right: 20px;
-  bottom: 50%;
+  right:-15;
+  bottom: 40%;
 
   border-radius: 1rem;
   rotate: -45deg;
