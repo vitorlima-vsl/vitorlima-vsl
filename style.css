@@ -191,7 +191,7 @@ nav {
   width: 64px;
   height: 64px;
   border-radius: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: #030712;
 }
 .services__habilidades-icons svg {
   width: 60%;
@@ -248,7 +248,7 @@ nav {
   top: 25px;
   width: 30px;
   height: 2px;
-  background-color: black;
+  background-color: #030712;
   position: absolute;
 }
 
@@ -256,6 +256,7 @@ nav {
   font-size: 45px;
   margin-top: 80px;
   margin-bottom: 0;
+  color: #030712;
 }
 
 .buttons__main {
@@ -288,7 +289,7 @@ nav {
 .portfolio {
     position: relative;
   text-decoration: none;
-  color: black;
+  color: #030712;
   font-weight: bold;
 }
 
@@ -307,7 +308,7 @@ nav {
   content: "";
   height: 2px;
   position: absolute;
-  background-color: black;
+  background-color: #030712;
   bottom: 0;
   left: 0;
   border-radius: 1rem;
@@ -317,7 +318,7 @@ nav {
 .github__div:hover .portfolio::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: #030712;
   border-radius: 1rem;
 
   width: 60px;
@@ -335,7 +336,7 @@ nav {
   width: 15px;
   height: 2px;
   position: absolute;
-  background-color: black;
+  background-color: #030712;
   right:-15;
   bottom: 40%;
 
@@ -346,7 +347,7 @@ nav {
 
 .seta::after {
   content: "";
-  background-color: rgb(0, 0, 0);
+  background-color: #030712;
   width: 7px;
   right: -0.9;
   top: -2.1;
@@ -358,7 +359,7 @@ nav {
 
 .seta::before {
   content: "";
-  background-color: rgb(0, 0, 0);
+  background-color: #030712;
   width: 7px;
   right: -0.8;
   top: 2.1;
@@ -416,7 +417,7 @@ nav {
 
 .header__meio a {
   text-decoration: none;
-  color: black;
+  color: #030712;
   font-weight: 500;
   font-size: 16px;
 }
@@ -431,7 +432,7 @@ nav {
 .header__a:hover::after {
   position: absolute;
   width: 20px;
-  background-color: black;
+  background-color: #030712;
   height: 2px;
   content: "";
   bottom: 0;
@@ -578,6 +579,7 @@ nav {
   font-size: 45px;
   margin: 0;
   margin-bottom: 75px;
+  
 }
 
 .bg__yellow {
@@ -587,17 +589,20 @@ nav {
 .project__card-linha {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: #030712;
 }
 
 .project__card-titulo {
   font-size: 25px;
   font-weight: 600;
+
+  
 }
 
 .project__card-titulo p {
   font-size: 18px;
   font-weight: 500;
+  color: #030712;
 }
 
 .project__card-container {
@@ -607,7 +612,7 @@ nav {
 /* .project__card{
     width: 350px;
     height: 450px;
-    background: rgb(0, 0, 0);
+    background: #030712;
 } */
 
 /* card-project */
@@ -679,7 +684,7 @@ nav {
 }
 
 .footer__section{
-    background-color: #ffffff00;
+    
     width: 1200px;
     height: 300px;
     margin-inline: auto;
@@ -690,8 +695,8 @@ nav {
 
 footer{
     width: 100%;
-    height: 40vh;
-    background-color: black;
+    height: 33vh;
+    background-color: #030712;
 }
 .footer__line1{
     position: absolute;
@@ -789,6 +794,7 @@ footer{
 
 .paragraph__footer{
     color: white;
+    font-weight: 800;
     text-align: center;
     font-size: 18px;
     padding-top: 5px;
@@ -810,7 +816,7 @@ footer{
 .contato__div h4{
     font-size: 28px;
     margin-bottom: 10px;
-    color: #c1f053;
+    color: #fff;
 }
 .contato__div div{
     display: flex;
@@ -821,6 +827,9 @@ footer{
     content: '';
     width: 100%;
     height: 2px;
+}
+.contato__div div:hover a{
+  font-weight: 600;
 }
 .contato__div a{
     position: relative;
@@ -836,7 +845,7 @@ footer{
     content: '';
     width: 20px;
     height: 2px;
-    transition: all .3s;
+    transition: all .4s ease-out;
 }
 .contato__div a:visited{
     color: #ffffff;
