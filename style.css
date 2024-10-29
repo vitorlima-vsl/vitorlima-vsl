@@ -80,6 +80,9 @@
 
 
 @media (max-width: 768px) {
+  footer{
+    display: none;
+  }
   #main-section {
     margin-top: 0 !important;
     margin-inline: 10% !important;
@@ -128,6 +131,7 @@
     padding: 0 !important;
     margin-inline: 0 !important;
     justify-content: space-between;
+    height: max-content !important;
   }
   .project__card-titulo {
     font-size: 20px !important;
@@ -541,23 +545,23 @@ nav {
 }
 
 #projects-section {
-  background-color: #fcda69;
-  height: max-content;
+  
+  height: 72vh;
   display: flex;
   padding-top: 98px;
   padding-bottom: 60px;
   margin: auto;
   margin-top: 20px;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+
 }
 #projects-div-bg {
   position: relative;
+  background: rgb(252,218,105);
+background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1) 61%, rgba(248,252,106,1) 97%);
 }
 
 .border__radius-10 {
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+
 }
 
 .project__grid-1 {
