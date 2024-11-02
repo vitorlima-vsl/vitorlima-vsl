@@ -55,6 +55,7 @@
     margin: 10% !important;
   }
   #projects-section {
+    height: max-content !important;
     flex-wrap: wrap;
     margin-inline: 10% !important;
     justify-content: space-between;
@@ -833,13 +834,13 @@ footer{
     height: 2px;
 }
 .contato__div div:hover a{
-  font-weight: 600;
+  color: #fff;
 }
 .contato__div a{
     position: relative;
     font-size: 16px;
     text-decoration: none;
-    color: #fff;
+    color: #dfdcdc;
 }
 .contato__div a::after{
     position: absolute;
@@ -852,7 +853,7 @@ footer{
     transition: all .4s ease-out;
 }
 .contato__div a:visited{
-    color: #ffffff;
+    color: #dfdcdc;
 }
 .github::after{
     background-color: rgb(43, 129, 2);
