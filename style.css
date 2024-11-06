@@ -42,6 +42,10 @@
 
 /* Add CSS rules inside the media query */
 @media (max-width: 1199px) {
+  .footer__lines{
+    display: none;
+  }
+
   nav {
     margin-inline: 10% !important;
   }
@@ -82,8 +86,24 @@
 
 @media (max-width: 768px) {
   footer{
+    overflow: hidden;
+    height: max-content;
+    padding-bottom: 10px;
+  }
+  .footer__lines{
     display: none;
   }
+  .contato__div
+  {
+    width: 100%;
+    margin-top: 0 !important;
+  }
+  
+.contato__div h4{
+
+  margin-top: 0;
+
+}
   #main-section {
     margin-top: 0 !important;
     margin-inline: 10% !important;
@@ -160,10 +180,48 @@
     margin-inline: 10% !important;
   }
   header {
-    display: none;
+  
   }
-}
+  .header__inicio img{
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .header__inicio h3{
+    font-size: 20px !important;
+  }
+  .header__fim {
+    display: none !important;
+  }
+  .header__meio {
+    margin-left: 10px;
+  }
+  .header__meio a{
+      display: none !important;
+  }
+  .header__meio__hamburguer{
+    background-color: transparent;
+    border: none;
+  }
+  .header__meio__hamburguer svg{
+    width: 20px;
+    height: 20px;
+  }
+  .hamburguer__modal{
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    
+  }
 
+
+}
+.hamburguer__modal{
+  display: none;;
+}
 #services-section {
   margin-bottom: 20vh;
   padding-top: 98px;
@@ -690,7 +748,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 
 .footer__section{
     
-    width: 1200px;
+    max-width: 1200px;
     height: 300px;
     margin-inline: auto;
     position: relative;
@@ -699,6 +757,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 }
 
 footer{
+
     width: 100%;
     height: 33vh;
     background-color: #030712;
@@ -821,6 +880,7 @@ footer{
 .contato__div h4{
     font-size: 28px;
     margin-bottom: 10px;
+    
     color: #fff;
 }
 .contato__div div{
