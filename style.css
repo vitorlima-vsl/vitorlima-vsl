@@ -201,26 +201,115 @@
   .header__meio__hamburguer{
     background-color: transparent;
     border: none;
+    display: block !important;
   }
   .header__meio__hamburguer svg{
     width: 20px;
     height: 20px;
+   
   }
   .hamburguer__modal{
-    display: block !important;
+    display: none ;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #fff; 
+  }
+  .hamburguer__modal__close-modal{
+    width: 36px;
+    height: 26px;
+    padding: 24px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+  }
+  .hamburguer__modal__close-modal::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 26px;
+    background-color: #030712;
+    rotate: 45deg;
+    top: 25%;
+    left: 50%;
+
+  }
+  .hamburguer__modal__close-modal::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 26px;
+    background-color: #030712;
+    rotate: -225deg;
+    top: 25%;
+    left: 50%;
+ 
+  }
+  .hamburguer__modal__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    row-gap: 12px;
+    margin-inline: 4%;
+  }
+  .hamburguer__modal__links a:nth-child(n){
+    font-size: 26px;
+    text-decoration: none;
+    color: #030712;
+    font-weight: 700;
+  }
+
+  .hamburguer__modal__container-btn-close{
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    align-items: center;
+    margin-left: 4%;
     
   }
 
+  .hamburguer__modal__search{
+
+    height: 30px;
+    border: 2px solid rgb(202, 202, 202);
+    border-radius: 10px;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 84%;
+
+  }
+  .hamburguer__modal__search:focus-within {
+    border: 2px solid rgb(133, 133, 133);
+  }
+  
+  .hamburguer__modal__search input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: flex;
+    
+  }
+  .hamburguer__modal__search svg{
+    width: 20px;
+    height: 20px;
+  }
+  .div__intro{
+    margin-top: 0 !important;
+  }
 
 }
+
+.header__meio__hamburguer{
+  display: none;
+}
 .hamburguer__modal{
-  display: none;;
+  display: none;
 }
 #services-section {
   margin-bottom: 20vh;
@@ -516,6 +605,7 @@ nav {
   display: flex;
   padding: 0 10px;
 }
+
 
 .header__search:focus-within {
   border: 2px solid rgb(133, 133, 133);
