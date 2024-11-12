@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="img/github-mark.svg">
+    <script>
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const favicon = document.querySelector("link[rel='icon']");
+        if (prefersDarkScheme) {
+            favicon.href = "img/github-mark-white.svg";
+        } else {
+            favicon.href = "img/github-mark.svg";
+        }
+    </script>
     <title>Vitor Lima - VSL</title>
 </head>
 
