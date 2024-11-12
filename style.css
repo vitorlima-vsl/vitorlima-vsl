@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
+
+@keyframes modal{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes modalContainer{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+
 @keyframes pulse {
   0% {
     box-shadow: 10px 10px 5px lightblue;
@@ -84,7 +103,22 @@
 }
 
 
+
 @media (max-width: 768px) {
+  .cell-hidden{
+    display: none;
+  }
+  .services__flex__col{
+    align-items: center;
+  }
+  .services__flex__col h4{
+  text-align: center;
+  }
+  #projects{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-inline: 10% !important;
+  }
   footer{
     overflow: hidden;
     height: max-content;
@@ -98,7 +132,22 @@
     width: 100%;
     margin-top: 0 !important;
   }
-  
+  .projects__cell-recentes{
+    display: block !important;
+    margin: 0;
+    font-size: 45px;
+    text-align: end;
+  }
+  .projects__titulo{
+    text-align: start !important;
+    margin-top: 0 !important;
+    font-size: 45px !important;
+
+  }
+  .projects__paragraph{
+    font-size: 14px !important;
+  }
+
 .contato__div h4{
 
   margin-top: 0;
@@ -107,12 +156,15 @@
   #main-section {
     margin-top: 0 !important;
     margin-inline: 10% !important;
+    min-height: initial !important;
+    height: 400px !important;
   }
 
   .buttons__main {
+    justify-content: center !important;
     margin-top: 25px !important;
   }
-  #services-section {
+  .habilidades__experiencias {
     flex-direction: column;
   }
   .services__flex__col{
@@ -131,7 +183,9 @@
   }
   
 
-
+  #services-section{
+    margin-bottom: 40px !important;
+  }
   .services__flex__col {
     width: 40% !important;
   }
@@ -213,9 +267,19 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 100%;
-    background-color: #fff; 
+    background-color: #2e2d2d46; 
+  }
+  .hamburguer__modal__container{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    width:0%;
+    animation: ;
   }
   .hamburguer__modal__close-modal{
     width: 36px;
@@ -251,9 +315,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 92%;
+    width: 100%;
     row-gap: 12px;
-    margin-inline: 4%;
   }
   .hamburguer__modal__links a:nth-child(n){
     font-size: 26px;
@@ -301,6 +364,7 @@
   }
   .div__intro{
     margin-top: 0 !important;
+   
   }
 
 }
@@ -313,10 +377,14 @@
 }
 #services-section {
   margin-bottom: 20vh;
-  padding-top: 98px;
+
   margin-inline: auto;
-  display: flex;
+ 
   gap: 25px;
+
+}
+.habilidades__experiencias{
+  display: flex;
   justify-content: space-between;
 }
 
@@ -840,14 +908,18 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
     padding-top: 30px;
     padding-bottom: 70px;
     height: max-content;
+    margin-bottom: 30px;
   }
   .bg-projects{
 
-    background: radial-gradient(circle, #F1F0F7, #F6F5FC, #E2E1E8);
+    /* background: radial-gradient(circle, #F1F0F7, #F6F5FC, #E2E1E8); */
+  }
+  .services__titulo{
+    margin-top: 0!important;
   }
   .projects__titulo{
     font-size: 60px;
-    margin-top: 0;
+    margin-top: 80px;
     margin-bottom: 0px;
     color: #030712;
     text-align: center;
@@ -856,11 +928,15 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
   .projects__paragraph{
  
     text-align: center;
-    width: 720px;
+    max-width: 720px;
     margin: auto;
     color: #25383f;
     font-weight: 600;
     margin-bottom: 20px;
+ 
+  }
+  .padding-inline-5px{
+    padding-inline: 5px;
   }
 
 
@@ -868,6 +944,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 
   /* card -- projects  */
   .projects__container{
+    margin-top: 40px;
     max-width: 1000px;
     margin-inline: auto;
     display: flex;
@@ -883,13 +960,13 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
       height: 340px;
       padding-top: 10px;
       
-      background: radial-gradient(circle, #286f6c, #256864, #23615E);
-      box-shadow: 0 5px 15px 0 #286f6c;
+      background: radial-gradient(circle, #030C12, #282b35, #040312);
+      box-shadow: 0 5px 10px 0 #030C12;
       cursor: pointer;
     }
     .container__card:hover .projects__card{
     
-      box-shadow: 0 5px 5px 0 #286f6c;
+      box-shadow: 0 5px 5px 0 #030C12;
       margin-top: -10px;
     }
     .projects__card-img{
@@ -897,6 +974,8 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
       margin-inline: auto;
     }
     .container__card{
+      display: flex;
+      justify-content: center;
       height: 350px;
       width: 300px;
     }
@@ -1196,4 +1275,26 @@ footer{
 }
 .instagram::after{
     background-color:  rgb(30, 97, 151);
+}
+
+.ditin-a{
+    color: #836df3;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.ditin-a:hover{
+  color: #a290ff;
+  
+}
+.projects__cell-recentes{
+  display: none;
+}
+ 
+
+
+.services__titulo-container{
+  margin-bottom: 80px;
 }
