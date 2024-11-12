@@ -778,9 +778,6 @@ nav {
 background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1) 61%, rgba(248,252,106,1) 97%);
 }
 
-.border__radius-10 {
-
-}
 
 .project__grid-1 {
   margin-bottom: 24px;
@@ -1016,64 +1013,63 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 
 
     /* button projects  */
-    /* From Uiverse.io by adeladel522 */ 
-  .button {
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(114, 114, 114, 0.2);
-    padding-block: 0.5rem;
-    padding-inline: 1.25rem;
-    background-color: #f8f7f1;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #25383f;
-    gap: 10px;
-    font-weight: bold;
-    border: 3px solid #ffffff4d;
-    outline: none;
-    overflow: hidden;
-    font-size: 15px;
-  }
+    .visualizar__btn {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 10px 20px rgba(114, 114, 114, 0.2);
+      padding-block: 0.5rem;
+      padding-inline: 1.25rem;
+      background-color: #f8f7f1;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #25383f;
+      gap: 10px;
+      font-weight: bold;
+      border: 3px solid #ffffff4d;
+      outline: none;
+      overflow: hidden;
+      font-size: 15px;
+    }
 
-  .icon {
-    width: 24px;
-    height: 24px;
-    transition: all 0.3s ease-in-out;
-  }
+    .icon {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease-in-out;
+    }
 
-  .button:hover {
-    transform: scale(1.05);
-    border-color: #fff9;
-  }
+    .visualizar__btn:hover {
+      transform: scale(1.05);
+      border-color: #fff9;
+    }
 
-  .button:hover .icon {
-    transform: translate(4px);
-  }
+    .visualizar__btn:hover .icon {
+      transform: translate(4px);
+    }
 
-  .button:hover::before {
-    animation: shine 1.5s ease-out infinite;
-  }
+    .visualizar__btn:hover::before {
+      animation: brilho 1.5s ease-out infinite;
+    }
 
-  .button::before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0) 70%
-    );
-    top: 0;
-    left: -100px;
-    opacity: 0.6;
-  }
+    .visualizar__btn::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+      );
+      top: 0;
+      left: -100px;
+      opacity: 0.6;
+    }
 
-  @keyframes shine {
+  @keyframes brilho {
     0% {
       left: -100px;
     }
@@ -1094,7 +1090,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 
 
 .footer__section{
-    
+  background-color: #030712;
     max-width: 1200px;
     height: 300px;
     margin-inline: auto;
