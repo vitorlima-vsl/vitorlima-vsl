@@ -525,6 +525,7 @@ nav {
 
 .max__width {
   max-width: 1200px;
+  margin-inline: auto;
 }
 
 
@@ -820,12 +821,6 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
   border-radius: 6px;
 }
 
-.portal__aplicacoes {
-  width: 100%;
-  border-radius: 6px;
-
-  margin-bottom: 4px;
-}
 
 .post-card:hover .portal__aplicacoes {
   height: auto;
@@ -836,6 +831,189 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
     position: relative;
 }
 
+
+
+
+/* projects section */
+  #projects{
+    max-width: 1200px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    height: max-content;
+  }
+  .bg-projects{
+
+    background: radial-gradient(circle, #F1F0F7, #F6F5FC, #E2E1E8);
+  }
+  .projects__titulo{
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: #030712;
+    text-align: center;
+    font-weight: 700;
+  }
+  .projects__paragraph{
+ 
+    text-align: center;
+    width: 720px;
+    margin: auto;
+    color: #25383f;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+
+
+
+  /* card -- projects  */
+  .projects__container{
+    max-width: 1000px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+    .projects__card{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 290px;
+      height: 340px;
+      padding-top: 10px;
+      
+      background: radial-gradient(circle, #286f6c, #256864, #23615E);
+      box-shadow: 0 5px 15px 0 #286f6c;
+      cursor: pointer;
+    }
+    .container__card:hover .projects__card{
+    
+      box-shadow: 0 5px 5px 0 #286f6c;
+      margin-top: -10px;
+    }
+    .projects__card-img{
+      width: 270px;
+      margin-inline: auto;
+    }
+    .container__card{
+      height: 350px;
+      width: 300px;
+    }
+    .projects__card-img img{
+      width: 100%;
+      border-radius: 6px;
+      
+      margin-bottom: 4px;
+    }
+    .projects__card-text{
+      padding-inline: 10px;
+    }
+    .projects__card-text h3{
+      margin-top: 2px;
+      font-size: 24px;
+      margin-bottom: 2px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .projects__card-text span{
+      margin-top: 0px;
+      font-size: 14px;
+      color: #f3f4f6;
+      font-weight: 500;
+    }
+    .projects__card-container-btns{
+      width: 270px;
+      margin-inline: auto;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: start;
+      gap: 8px;
+    }
+   
+    .projects__card-container-btns :nth-child(2) {
+      width: 120px;
+    }
+
+
+    /* button projects  */
+    /* From Uiverse.io by adeladel522 */ 
+  .button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(114, 114, 114, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: #f8f7f1;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #25383f;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+  /* codigo btn  */
+ 
+/* projects section */
+
+
+
+
 .footer__section{
     
     max-width: 1200px;
@@ -843,7 +1021,6 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
     margin-inline: auto;
     position: relative;
     z-index: 0;
-  
 }
 
 footer{
