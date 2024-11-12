@@ -77,24 +77,10 @@
   #main-section {
     margin: 10% !important;
   }
-  #projects-section {
-    height: max-content !important;
-    flex-wrap: wrap;
-    margin-inline: 10% !important;
-    justify-content: space-between;
-  }
-  .project__grid-1 {
-    margin-bottom: inherit;
-    margin-right: inherit;
-    width: 350px;
-  }
+  
 
-  .project__grid-2 {
-    margin-bottom: inherit;
-    width: 350px;
-    margin-inline: 0;
-  }
 
+  
   .project__grid-3 {
     margin-bottom: inherit;
     margin-inline: 0 !important;
@@ -178,14 +164,9 @@
 
   }
 
-  .post-card {
-    width: 250px !important;
-    height: 170px !important;
-  }
+ 
 
-  .post-card:hover {
-    height: 250px !important;
-  }
+
   
 
   #services-section{
@@ -204,35 +185,14 @@
   .foto__main {
     display: none;
   }
-  #projects-div-bg {
-    border-radius: 0;
-  }
-  #projects-section {
-    padding: 0 !important;
-    margin-inline: 0 !important;
-    justify-content: space-between;
-    height: max-content !important;
-  }
-  .project__card-titulo {
-    font-size: 20px !important;
-  }
-  .project__card-titulo p {
-    font-size: 14px !important;
-    font-weight: 500;
-  }
-  .project__titulo {
-    margin-bottom: 10px !important;
-  }
+  
+  
 
-  .project__grid-1 {
-    margin-bottom: 0 !important;
-    margin-inline: 10% !important;
-  }
-  .project__grid-2 {
-    margin-top: 10% !important;
-    margin-bottom: 0 !important;
-    margin-inline: 10% !important;
-  }
+  
+
+
+  
+  
   .project__grid-3 {
     margin-top: 10% !important;
     margin-bottom: 10% !important;
@@ -767,68 +727,6 @@ nav {
   margin: auto;
 }
 
-#projects-section {
-  
-  height: 72vh;
-  display: flex;
-  padding-top: 98px;
-  padding-bottom: 60px;
-  margin: auto;
-  margin-top: 20px;
-
-}
-#projects-div-bg {
-  position: relative;
-  background: rgb(252,218,105);
-background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1) 61%, rgba(248,252,106,1) 97%);
-}
-
-
-.project__grid-1 {
-  margin-bottom: 24px;
-  margin-right: 25px;
-}
-
-.project__grid-2 {
-  margin-top: 142px;
-  margin-inline: 25px;
-}
-
-.project__grid-3 {
-  margin-top: 67px;
-  margin-inline: 25px;
-}
-
-.project__titulo {
-  font-size: 45px;
-  margin: 0;
-  margin-bottom: 75px;
-  
-}
-
-.bg__yellow {
-  background-color: #fcda69;
-}
-
-.project__card-linha {
-  width: 100%;
-  height: 2px;
-  background-color: #030712;
-}
-
-.project__card-titulo {
-  font-size: 25px;
-  font-weight: 600;
-
-  
-}
-
-.project__card-titulo p {
-  font-size: 18px;
-  font-weight: 500;
-  color: #030712;
-}
-
 .project__card-container {
   max-width: 330px;
 }
@@ -840,61 +738,15 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 } */
 
 /* card-project */
-.post-card {
-  width: 350px;
-  height: 250px;
-  background: lightgrey;
-  background-color: rgb(24 27 32);
-  border: 1px solid rgb(84 90 106);
-  border-radius: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
 
-  transition: all 0.35s ease-in;
-}
 
-.post-card:hover {
-  cursor: pointer;
-  height: 290px;
-}
 
-.avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  background-image: linear-gradient(to top left, blueviolet, rgb(73, 31, 112));
-}
-
-.title {
-  font-size: 20px;
-  line-height: 22px;
-  font-weight: 600;
-  margin-top: 10px;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.35s ease-in;
-}
-
-.title:hover {
-  text-decoration: underline blueviolet;
-}
-
-.datetime {
-  font-size: 12px;
-  color: rgb(168 179 207);
-  margin: 10px 0;
-}
 
 .card__dashboard {
   border-radius: 6px;
 }
 
 
-.post-card:hover .portal__aplicacoes {
-  height: auto;
-}
 
 
 .relative{
@@ -1019,6 +871,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
 
     /* button projects  */
     .visualizar__btn {
+      text-decoration: none;
       position: relative;
       transition: all 0.3s ease-in-out;
       box-shadow: 0px 10px 20px rgba(114, 114, 114, 0.2);
@@ -1029,7 +882,7 @@ background: linear-gradient(166deg, rgba(252,218,105,1) 40%, rgba(252,218,105,1)
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
+      cursor: default;
       color: #25383f;
       gap: 10px;
       font-weight: bold;
