@@ -3,7 +3,10 @@ const hamburguerModal = document.querySelector('.hamburguer__modal');
 const btnCloseModal = document.querySelector('.hamburguer__modal__close-modal');
 const btnsAnchorModal = document.querySelectorAll('.AnchorsModal');
 const modalContainer = document.querySelector('.hamburguer__modal__container');
+const searchs = document.querySelectorAll('.search__input');
 
+const modalProcura = document.querySelector('.modalProcura');
+const cliqueParaSair = document.querySelector('.clique-para-sair');
 
 btnHamburguer.addEventListener('click', () => {
     hamburguerModal.style.display = "block";
@@ -35,4 +38,15 @@ btnsAnchorModal.forEach(btn => {
         hamburguerModal.style.display = "none";
         modalContainer.style.display = "none";
     });
+});
+
+searchs.forEach(search => {
+    search.addEventListener('keyup', () => {
+        search.value = '';
+       modalProcura.style.display = "block";
+    });
+});
+
+cliqueParaSair.addEventListener('click', () => {
+    modalProcura.style.display = "none";
 });
