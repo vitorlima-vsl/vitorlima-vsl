@@ -238,9 +238,7 @@
     margin-bottom: 10% !important;
     margin-inline: 10% !important;
   }
-  header {
   
-  }
   .header__inicio img{
     width: 50px !important;
     height: 50px !important;
@@ -284,7 +282,7 @@
     height: 100vh;
     background-color: #fff;
     width:0%;
-    animation: ;
+    
   }
   .hamburguer__modal__close-modal{
     width: 36px;
