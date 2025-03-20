@@ -816,7 +816,7 @@ nav {
       
       background: radial-gradient(circle, #030C12, #282b35, #040312);
       box-shadow: 0 5px 10px 0 #030C12;
-  
+      transition: all 0.3s;
     }
     .container__card:hover .projects__card{
     
