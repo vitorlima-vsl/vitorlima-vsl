@@ -960,7 +960,7 @@ nav {
 footer{
 
     width: 100%;
-    height: 33vh;
+    padding-bottom: 30px;
     background-color: #030712;
 }
 .footer__line1{
