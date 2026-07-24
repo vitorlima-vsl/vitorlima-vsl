@@ -1,0 +1,357 @@
+.project {
+  max-width: 1200px;
+  margin: 0 auto 14rem;
+  padding: 1rem 2rem 0;
+}
+
+.project__view[hidden] {
+  display: none;
+}
+
+/* "Ver todos" / "Voltar" button — reuses the home button look */
+.project__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.project__more-btn {
+  display: flex;
+  align-items: center;
+  height: 44px;
+
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.project__more-btn .home__button-first {
+  height: 100%;
+  width: 25px;
+
+  background-color: var(--clr-yellow);
+  border-radius: 5px 0 0 5px;
+  border-right: 2px solid var(--clr-blue-bg);
+}
+
+.project__more-btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  padding-left: 0.2rem;
+
+  background-color: var(--clr-blue-bg);
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.project__more-btn .home__button-second {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2.4rem;
+
+  background-color: var(--clr-white);
+  border-radius: 0 5px 5px 0;
+  color: var(--clr-blue-bg);
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s;
+}
+
+.project__more-btn:hover .home__button-second {
+  background-color: var(--clr-yellow);
+}
+
+.project__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  margin-bottom: 6rem;
+}
+
+.project__intro-sub {
+  color: var(--clr-yellow);
+  font-size: 1.2rem;
+  letter-spacing: 0.6rem;
+}
+
+.project__intro-title {
+  color: var(--clr-white);
+  font-size: 4rem;
+}
+
+.project__intro-text {
+  max-width: 640px;
+  color: var(--clr-white-sdw);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.project__card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--clr-blue-border);
+  border: 2px solid var(--clr-blue-dark);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.project__card:hover {
+  transform: translateY(-8px);
+  border-color: var(--clr-yellow);
+  box-shadow: 0 1.6rem 3.2rem rgba(1, 53, 126, 0.6);
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.8rem 3.6rem 0;
+}
+
+.project__type {
+  display: flex;
+  flex-direction: column;
+}
+
+.project__type span:first-child {
+  color: var(--clr-white);
+  font-size: 1.6rem;
+  font-family: var(--font-anzeigen);
+}
+
+.project__type span:nth-child(2) {
+  color: var(--clr-yellow);
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.project__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  border: 2px solid var(--clr-blue-bg);
+  color: var(--clr-white);
+
+  transition: all 0.3s;
+}
+
+.project__card:hover .project__icon {
+  background-color: var(--clr-yellow);
+  border-color: var(--clr-yellow);
+  color: var(--clr-blue-border);
+}
+
+.project__img {
+  height: 190px;
+  margin: 2.4rem 3.6rem 0;
+  overflow: hidden;
+
+  border: 6px solid var(--clr-white);
+  border-radius: 10px;
+}
+
+.project__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s, object-position 3s ease;
+}
+
+.project__card:hover .project__img img {
+  transform: scale(1.04);
+  object-position: bottom center;
+}
+
+.project__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 3.6rem 0;
+}
+
+.project__title {
+  margin-bottom: 1.2rem;
+
+  color: var(--clr-white);
+  font-size: 2.8rem;
+}
+
+.project__desc {
+  flex: 1;
+  margin-bottom: 2.4rem;
+
+  color: var(--clr-white-sdw);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+
+  /* "linha de corte" — régua que atravessa o card pelo MEIO das tags */
+  position: relative;
+}
+
+.project__tags::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: calc(100% + 7.2rem);
+
+  background-color: var(--clr-blue-dark);
+
+  position: absolute;
+  top: 50%;
+  left: -3.6rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.project__tags span {
+  padding: 0.4rem 1rem;
+
+  background-color: var(--clr-yellow);
+  border-radius: 0.4rem;
+  color: var(--clr-blue-border);
+  font-size: 1rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.project__button {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 2.8rem 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-white);
+  border: 4px solid var(--clr-blue-bg);
+  border-radius: 50%;
+  color: var(--clr-blue-border);
+  text-decoration: none;
+  overflow: hidden;
+
+  position: relative;
+  transition: all 0.5s;
+}
+
+.project__button i {
+  margin-left: 0.2rem;
+
+  font-size: 1.5rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.project__button-square {
+  width: 0;
+  height: 100%;
+
+  background-color: var(--clr-yellow);
+  border-radius: 10px 0 0 10px;
+
+  position: absolute;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.project__button span {
+  opacity: 0;
+
+  font-size: 1rem;
+  text-wrap: nowrap;
+
+  position: absolute;
+  right: 1.6rem;
+  transition: all 0.2s;
+}
+
+.project__card:hover .project__button {
+  width: 15rem;
+
+  border-radius: 1.2rem;
+  font-size: 1rem;
+}
+
+.project__card:hover .project__button .project__button-square {
+  width: 2.5rem;
+}
+
+.project__card:hover .project__button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background-color: var(--clr-blue-bg);
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+
+  left: 2.3rem;
+}
+
+.project__card:hover .project__button span {
+  opacity: 1;
+}
+
+@media (max-width: 980px) {
+  .project__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .project {
+    padding-top: 0px !important;
+  }
+  .project__grid {
+    grid-template-columns: 1fr;
+  }
+}

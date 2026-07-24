@@ -1,0 +1,148 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+
+.home__text {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.home__subtitle {
+  color: var(--clr-yellow);
+  font-size: 1.2rem;
+  letter-spacing: 1.5rem;
+
+  margin-right: -1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.home__title {
+  color: var(--clr-white);
+  font-family: var(--font-anzeigen);
+  font-size: 14rem;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.home__title span {
+  margin-top: -3.8rem;
+}
+
+.home__desc {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.home__desc p {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--clr-white);
+  font-size: 1.3rem;
+  text-align: end;
+}
+
+.home__icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--clr-white);
+  border-radius: 100%;
+  color: var(--clr-yellow);
+  font-size: 2.4rem;
+  transform: rotate(45deg);
+}
+
+.home__button {
+  display: flex;
+  height: 40px;
+
+  position: relative;
+
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.home__button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding-left: 0.2rem;
+
+  background-color: var(--clr-blue-bg);
+  border-radius: 50%;
+  color: var(--clr-white);
+  font-size: 0.8rem;
+
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.home__button-first {
+  height: 100%;
+  width: 25px;
+
+  background-color: var(--clr-yellow);
+  border-radius: 5px 0 0 5px;
+  border-right: 2px solid var(--clr-blue-bg);
+
+  transition: all 0.3s;
+}
+
+.home__button-second {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+
+  background-color: var(--clr-white);
+  border-radius: 0 5px 5px 0;
+  color: var(--clr-blue-bg);
+  font-size: 1.3rem;
+}
+
+
+.home__img {
+  flex: 1 1 62%;
+  max-width: 820px;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.home__logo-3d {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+
+  position: relative;
+  z-index: 10;
+}

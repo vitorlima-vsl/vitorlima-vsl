@@ -1,0 +1,560 @@
+/* ============================================================
+   Responsive — mobile-first corrections for a desktop-only base.
+   Breakpoints: 1240 / 1024 / 768 / 480 / 375
+   ============================================================ */
+
+/* ── Prevent horizontal scroll globally ──────────────────── */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ── 1240 small desktop ──────────────────────────────────── */
+@media (max-width: 1240px) {
+  .header {
+    width: 94%;
+  }
+  .header__list {
+    gap: 4rem;
+  }
+  .footer__background {
+    width: 103%;
+  }
+  .footer__background::before,
+  .footer__background::after {
+    display: none;
+  }
+}
+
+/* ── 1024 tablet landscape ───────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --header-top: 1.6rem;
+    --header-height: 6.4rem;
+    --header-gap: 1.6rem;
+  }
+ 
+  .header {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+ .header__navResponsiv{
+    flex: 1; height: 100%; display: flex; align-items: center; border: 3px solid #003e96; border-radius: 0 1rem 1rem 0; padding-right: 6px;
+    background-color: var(--clr-blue-bg);
+  }
+  .header__toggle {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .header__nav {
+    order: 4;
+    flex: none;
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--clr-blue-border);
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.8rem);
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  }
+
+  .header--open .header__nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header__list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0.8rem 0;
+  }
+
+  .header__item {
+    width: 100%;
+  }
+
+  .header__item a {
+    display: block;
+    width: 100%;
+    padding: 1.4rem 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+/* 
+  .header__medias {
+    order: 3;
+    padding-right: 2.4rem;
+    
+  } */
+    .header__medias {
+    display: none;
+  }
+
+  .header__text {
+    width: 16rem;
+  }
+
+  /* hero stacks vertically */
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    padding: 14rem 2rem 4rem;
+  }
+  .home__text {
+    align-items: center;
+  }
+  .home__subtitle {
+    margin-right: 0;
+  }
+  .home__title {
+    align-items: center;
+    font-size: 11rem;
+  }
+  .home__desc p {
+    text-align: center;
+  }
+  .home__img {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* projects: 2 columns */
+  .project__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* skills: full width card */
+  .services {
+    padding: 0 2rem;
+  }
+  .services__card {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 3.2rem;
+  }
+  .services__card::after {
+    width: 100%;
+  }
+  .services__name {
+    width: 280px;
+  }
+}
+
+/* ── 768 tablet portrait ─────────────────────────────────── */
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+
+  /* header */
+  .header {
+    width: calc(100% - 2.4rem);
+  }
+  .header__text {
+    width: 12rem;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    padding-left: 3rem;
+  }
+  .header__toggle {
+    width: 3.4rem;
+    height: 3.4rem;
+    font-size: 1.4rem;
+  }
+  /* .header__medias {
+    gap: 0.6rem;
+    padding-right: 1.6rem;
+  } */
+  .header__link {
+    width: 3.4rem;
+    height: 3.4rem;
+    font-size: 1.3rem;
+  }
+
+  /* hero */
+  .home__title {
+    font-size: 9rem;
+  }
+
+  /* projects: single column */
+  .project__grid {
+    grid-template-columns: 1fr;
+  }
+  .project {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* ── Footer simplificado no mobile ──────────────────────────
+     O card flutuante (absolute, top:-73px) sobrepunha o nav no mobile.
+     Aqui ele entra no fluxo normal, rente às bordas, e a decoração
+     (squares + background claro) é escondida para não criar quebras. */
+  .footer__absolute {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .footer__square {
+    display: none;
+  }
+  .footer__background {
+    display: none;
+  }
+  .footer__header {
+    width: auto;
+    height: auto;
+    margin: 0 1.6rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+    padding: 3rem 2.4rem;
+    border: none;
+  }
+  .footer__header span {
+    flex: none;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+  .footer__socials {
+    margin-right: 0;
+    justify-content: center;
+  }
+  /* nav stacks below the card (no more overlap) */
+  .footer__nav {
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .footer__copy {
+    align-items: center;
+  }
+
+  /* skills: break into two rows */
+  /* tabs wrap so they never overflow narrow screens */
+  .services__buttons {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.4rem;
+  }
+  .services__button {
+    min-height: 4.2rem;
+    padding: 0 2.4rem;
+  }
+
+  /* skills go full column from tablet down — avoids row overflow */
+  .services__card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+  .services__card::after {
+    display: none;
+  }
+  .services__name {
+    width: auto;
+  }
+  .services__feats {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .services__feat {
+    width: auto;
+    justify-content: center;
+  }
+
+  .project__button span {
+    display: none;
+  }
+
+  .project__card:hover .project__button {
+    width: 5.5rem;
+    border-radius: 50%;
+  }
+
+  .project__card:hover .project__button-square {
+    width: 0;
+  }
+
+  .project__card:hover .project__button i {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: var(--clr-blue-border);
+    font-size: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ── 480 phone ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* header */
+  .header {
+    width: calc(100% - 2rem);
+    height: 6rem;
+    top: 1rem;
+  }
+  .header__balls {
+    width: 4.4rem;
+    padding-right: 1.4rem;
+  }
+  .header__logo span {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3.6rem;
+    left: 3.2rem;
+  }
+  .header__text {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    padding-left: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+  }
+  .header__toggle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+  /* socials still visible but smaller */
+  /* .header__medias {
+    padding-right: 1rem;
+    gap: 0.4rem;
+  } */
+  .header__link {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+  }
+
+  /* hero */
+  .home {
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+  }
+  .home__title {
+    font-size: 7.6rem;
+  }
+  .home__title span {
+    margin-top: -2rem;
+  }
+  .home__img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* projects */
+  .project {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    padding-top: 0px !important;
+  }
+  .project__intro-sub {
+    text-align: center;
+  }
+  .project__intro-title {
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    word-break: break-word;
+  }
+  .project__intro-text {
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+  }
+  .project__header,
+  .project__text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .project__img {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 160px;
+  }
+  .project__button {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  /* fix the cut-line width on phones */
+  .project__tags::before {
+    width: calc(100% + 4rem);
+    left: -2rem;
+  }
+
+  /* "ver todos" button */
+  .project__more-btn .home__button-second {
+    font-size: 1.1rem;
+    padding: 0 1.6rem;
+  }
+
+  /* skills */
+  .services {
+    padding: 0 1.6rem;
+  }
+  .services__title {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .services__buttons {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    padding: 0.4rem;
+    gap: 0.4rem;
+  }
+  .services__button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+  }
+  /* on narrow phones the row layout overflows — go column */
+  .services__card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .services__card::after {
+    display: none;
+  }
+  .services__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .services__icon i {
+    font-size: 4.4rem;
+  }
+  .services__name {
+    width: auto;
+    font-size: 2rem;
+  }
+  .services__feats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  .services__feat {
+    justify-content: center;
+    width: auto;
+    max-width: 180px;
+  }
+
+  /* footer (card já é static/coluna desde 768px) */
+  .footer__header span {
+    font-size: 2.2rem;
+  }
+  .footer__socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  .footer__icon {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+  .footer__navigation .header__list {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+/* ── 375 small phone ─────────────────────────────────────── */
+@media (max-width: 375px) {
+  html {
+    font-size: 52%;
+  }
+
+  /* header: hide socials at this extreme width to avoid overflow */
+  .header__medias {
+    display: none;
+  }
+  .header__text {
+    font-size: 0.85rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .home__title {
+    font-size: 7rem;
+  }
+
+  /* projects — kill letter-spacing on prose at this width */
+  .project__intro-title,
+  .project__intro-text,
+  .project__intro-sub,
+  .project__title,
+  .project__desc {
+    letter-spacing: 0;
+  }
+  .project__intro-title {
+    font-size: 2.2rem;
+  }
+  .project {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .project__header,
+  .project__text {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .project__img {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
+  .project__button {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
+  .project__tags::before {
+    width: calc(100% + 3.2rem);
+    left: -1.6rem;
+  }
+
+  /* skills: icon beside name, feats below */
+  .services__card {
+    gap: 1rem;
+  }
+  .services__feats {
+    gap: 1rem;
+  }
+  .services__feat {
+    max-width: 160px;
+  }
+}

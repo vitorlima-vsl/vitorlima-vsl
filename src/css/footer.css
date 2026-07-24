@@ -1,0 +1,321 @@
+.footer {
+  --footer-panel-height: clamp(23rem, 16vw, 27rem);
+  --footer-nav-top-space: clamp(18rem, 12vw, 20rem);
+  --footer-nav-bottom-space: clamp(4.8rem, 4vw, 6rem);
+
+  width: 100%;
+
+  background-color: var(--clr-blue-border);
+  overflow-x: clip;
+
+  position: relative;
+}
+
+.footer__square {
+  width: 19%;
+  height: 50px;
+
+  background-color: var(--clr-blue-border);
+  border-top: 3px solid var(--clr-blue-dark);
+
+  position: absolute;
+  top: 0;
+}
+
+.footer__square--left {
+  border-right: 3px solid var(--clr-blue-dark);
+  border-radius: 0 1.6rem 0 0;
+
+  left: 0;
+}
+
+.footer__square--right {
+  border-left: 3px solid var(--clr-blue-dark);
+  border-radius: 1.6rem 0 0 0;
+
+  right: 0;
+}
+
+.footer__absolute {
+  position: absolute;
+  top: -73px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.footer__header {
+  width: min(1200px, calc(100vw - 4rem));
+  height: 170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.6rem;
+
+  background-color: var(--clr-blue-border);
+  border: 3px solid var(--clr-blue-dark);
+  border-radius: 1.6rem;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1000;
+}
+
+/* Painel azul-claro que conecta o card ao fundo da página.
+   Vai do meio do card até ~73px abaixo dele (= topo do footer), preenchendo
+   a área das aberturas dos notches com azul-claro contínuo. */
+.footer__background {
+  display: block;
+  width: 103%;
+  height: var(--footer-panel-height);
+  height: 70%;
+  background-color: var(--clr-blue-bg);
+  border: 3px solid var(--clr-blue-dark);
+  border-top: 0;
+  border-radius: 0 0 1.6rem 1.6rem;
+
+  position: absolute;
+  left: 50%;
+  top: 42.7%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+/* Abas laterais que ligam o painel claro ao fundo da página (valores originais SET4) */
+/* .footer__background::before,
+.footer__background::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  
+  background-color: var(--clr-blue-);
+
+  position: absolute;
+  top: -35px;
+  z-index: 999;
+} */
+
+.footer__background::before {
+
+  border-right:  3px solid red;
+  border-top: 3px solid red;
+  left: -53px;
+  top: 0%;
+  border-radius: 100%;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 0%;
+  border-top-left-radius: 0%;
+}
+
+.footer__background::after {
+  right: -35px;
+}
+
+.footer__header span {
+  flex: 1;
+  min-width: 0;
+  padding-right: 2rem;
+
+  color: var(--clr-white);
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.footer__socials {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-right: 1.2rem;
+
+  position: relative;
+  z-index: 1000;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.footer__icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--clr-blue-dark);
+  border: 4px solid var(--clr-white);
+  border-radius: 1.4rem;
+  color: var(--clr-white);
+  font-size: 2.2rem;
+
+  position: relative;
+  z-index: 50;
+  transition: all 0.3s;
+}
+
+.footer__line {
+  width: 2px;
+  height: 0;
+
+  background-color: var(--clr-blue-dark);
+
+  position: absolute;
+  z-index: 40;
+  transition: all 0.9s;
+}
+
+.footer__play {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  opacity: 0;
+
+  position: absolute;
+  bottom: 30px;
+  z-index: 60;
+  transition: all .5s;
+}
+
+.footer__social:first-child > .footer__icon {
+  background-color: #e64080;
+}
+
+.footer__social:nth-child(2) > .footer__icon {
+  background-color: #2dd660;
+}
+
+.footer__social:nth-child(3) > .footer__icon {
+  background-color: #e74655;
+}
+
+.footer__social:nth-child(4) > .footer__icon {
+  background-color: #000;
+}
+
+.footer__social:nth-child(5) > .footer__icon {
+  background-color: #db3030;
+}
+
+.footer__social:first-child > .footer__play {
+  color: #e64080;
+}
+
+.footer__social:nth-child(2) > .footer__play {
+  color: #40e672;
+}
+
+.footer__social:nth-child(3) > .footer__play {
+  color: #e74655;
+}
+
+.footer__social:nth-child(4) > .footer__play {
+  color: #000;
+}
+
+.footer__social:nth-child(5) > .footer__play {
+  color: #e64040;
+}
+
+.footer__social:hover .footer__line {
+  height: 300px;
+}
+
+.footer__social:hover > .footer__play {
+  bottom: 43px;
+  opacity: 1;
+}
+
+.footer__nav {
+  width: min(1200px, calc(100% - 4rem));
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--footer-nav-top-space) 0 var(--footer-nav-bottom-space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  z-index: 20;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__balls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 0.8rem;
+  width: 5.6rem;
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.footer__flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__ball {
+  width: 0.5rem;
+  height: 0.5rem;
+
+  background-color: var(--clr-white);
+  border-radius: 100%;
+}
+
+.footer__logo span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  color: var(--clr-blue-border);
+  font-size: 4.4rem;
+  font-family: var(--font-anzeigen);
+}
+
+.footer__text {
+  color: var(--clr-white);
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  height: 100%;
+  padding-left: 1rem;
+}
+
+.footer__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer__copy span {
+  color: var(--clr-yellow);
+  font-size: 0.8rem;
+}

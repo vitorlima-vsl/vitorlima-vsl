@@ -1,0 +1,61 @@
+@import url(header.css);
+@import url(home.css);
+@import url(project.css);
+@import url(services.css);
+@import url(post.css);
+@import url(footer.css);
+@import url(responsive.css);
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Gilroy.otf");
+}
+
+@font-face {
+  font-family: "Anzeigen";
+  src: url("../font/Anzeigen.otf");
+}
+
+:root {
+  --clr-blue-bg: #0047ab;
+  --clr-blue-border: #003e96;
+  --clr-blue-dark: #01357e;
+  --clr-white: #fdfffd;
+  --clr-white-sdw: #f3e9e7;
+  --clr-yellow: #ffd33f;
+  --font-anzeigen: "Anzeigen";
+  --font-gilroy: "Gilroy";
+
+  --header-top: 4rem;
+  --header-height: 8rem;
+  --header-gap: 2rem;
+  --header-offset: calc(var(--header-top) + var(--header-height) + var(--header-gap) - 70px);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  letter-spacing: 0.15rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+#sobre,
+#projetos,
+#skills {
+  scroll-margin-top: var(--header-offset);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-color: var(--clr-blue-bg);
+  font-family: var(--font-gilroy);
+}
