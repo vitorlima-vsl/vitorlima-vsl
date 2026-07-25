@@ -2,6 +2,36 @@
 // Each card keeps the numbered/tagged card style with the hover button.
 const projects = [
   {
+    type: "PORTAL",
+    icon: "fa-window-restore",
+    title: "Portal de Aplicações",
+    desc: "Portal que apresenta as aplicações desenvolvidas e a equipe.",
+    tags: ["VUE", "TAILWIND"],
+    img: "img/inomeado.png",
+    link: "https://ssa.saocristovao.se.gov.br/",
+    featured: true,
+  },
+    
+  {
+    type: "FULLSTACK",
+    icon: "fa-globe",
+    title: "KipperFit",
+    desc: "Landing page e Aplicativo KipperFit.",
+    tags: ["REACT", "CSS", "TYPESCRIPT"],
+    img: "img/kipperfit-web.png",
+    link: "https://kipperfit.com.br/",
+  },
+    {
+    type: "WEB SITE",
+    icon: "fa-briefcase",
+    title: "Emprega+",
+    desc: "Banco de Currículos e Cursos de uma cidade.",
+    tags: ["TAILWIND", "CSS", "HTML"],
+    img: "img/banco-de-curriculos.png",
+    link: "https://empregamais.saocristovao.se.gov.br/",
+    featured: true,
+  },
+  {
     type: "LANDING PAGE",
     icon: "fa-globe",
     title: "Zdoc",
@@ -20,26 +50,8 @@ const projects = [
     link: "https://github.com/AnthonyAragao/e-commerce",
     featured: true,
   },
-  {
-    type: "WEB SITE",
-    icon: "fa-briefcase",
-    title: "Emprega+",
-    desc: "Banco de Currículos e Cursos de uma cidade.",
-    tags: ["TAILWIND", "CSS", "HTML"],
-    img: "img/banco-de-curriculos.png",
-    link: "https://empregamais.saocristovao.se.gov.br/",
-    featured: true,
-  },
-  {
-    type: "PORTAL",
-    icon: "fa-window-restore",
-    title: "Portal de Aplicações",
-    desc: "Portal que apresenta as aplicações desenvolvidas e a equipe.",
-    tags: ["VUE", "TAILWIND"],
-    img: "img/inomeado.png",
-    link: "https://ssa.saocristovao.se.gov.br/",
-    featured: true,
-  },
+
+  
   {
     type: "SOCIAL",
     icon: "fa-hand-holding-heart",
@@ -94,6 +106,8 @@ const projects = [
     img: "img/vitorlima-vsl.png",
     link: "https://github.com/vitorlima-vsl",
   },
+  
+
 ];
 
 function projectCard(p, index) {
@@ -131,7 +145,7 @@ function projectCard(p, index) {
 }
 
 // Featured order requested: Portal de Aplicações, Emprega+, E-commerce
-const featuredOrder = ["Portal de Aplicações", "Emprega+", "E-commerce"];
+const featuredOrder = ["Portal de Aplicações",  "KipperFit", "Emprega+"];
 const featured = featuredOrder
   .map((t) => projects.find((p) => p.title === t))
   .filter(Boolean);
