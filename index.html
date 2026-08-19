@@ -16,7 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="src/css/app.css" />
-    <link rel="icon" type="image/png" href="src/img/vl__icon-light.png">
+    <link rel="icon" type="image/png" href="src/img/vl__icon-light.png" />
   </head>
   <body>
     <header class="header">
@@ -34,17 +34,17 @@
           DEVELOPER
         </div>
       </div>
-     <div class="header__navResponsiv">
-      <button
-        class="header__toggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="header-nav"
-      >
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
-    </div>
+      <div class="header__navResponsiv">
+        <button
+          class="header__toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
       <nav class="header__nav" id="header-nav" aria-label="Navegação principal">
         <ul class="header__list">
           <li class="header__item">
@@ -62,7 +62,7 @@
         <a
           href="https://github.com/vitorlima-vsl"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="header__link"
           aria-label="GitHub"
         >
@@ -71,7 +71,7 @@
         <a
           href="https://www.linkedin.com/in/vitorlima-vsl/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="header__link"
           aria-label="LinkedIn"
         >
@@ -80,7 +80,7 @@
         <a
           href="https://www.instagram.com/vitorlima.vsl/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="header__link"
           aria-label="Instagram"
         >
@@ -89,6 +89,7 @@
       </div>
     </header>
 
+    <main>
     <section class="home" id="sobre">
       <div class="home__text">
         <span class="home__subtitle">PORTFÓLIO</span>
@@ -103,9 +104,9 @@
           </div>
         </div>
         <a
-          href="https://www.canva.com/design/DAFbuwvBYas/QQQblxhv2o2vU2cZSi5QUA/edit"
+          href="https://www.canva.com/design/DAFbuwvBYas/QQQblxhv2o2vU2cZSi5QUA/view"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="home__button"
         >
           <div class="home__button-first"></div>
@@ -140,7 +141,7 @@
         <div class="project__grid project__grid--featured"></div>
 
         <div class="project__more">
-          <button class="project__more-btn" data-action="show-all">
+          <button class="project__more-btn" type="button" data-action="show-all">
             <div class="home__button-first"></div>
             <div><i class="fa-solid fa-play"></i></div>
             <div class="home__button-second">VER TODOS OS PROJETOS</div>
@@ -162,7 +163,7 @@
         <div class="project__grid project__grid--all"></div>
 
         <div class="project__more">
-          <button class="project__more-btn" data-action="show-featured">
+          <button class="project__more-btn" type="button" data-action="show-featured">
             <div class="home__button-first"></div>
             <div><i class="fa-solid fa-play"></i></div>
             <div class="home__button-second">VOLTAR AOS DESTAQUES</div>
@@ -174,20 +175,44 @@
     <section class="services" id="skills">
       <div class="services__header">
         <h2 class="services__title">Minhas Skills</h2>
-        <div class="services__buttons">
-          <div
+        <div class="services__buttons" role="group" aria-label="Categorias de skills">
+          <button
+            type="button"
             class="services__button services__button--active"
             data-type="front-end"
+            aria-pressed="true"
           >
             FRONT-END
-          </div>
-          <div class="services__button" data-type="back-end">BACK-END</div>
-          <div class="services__button" data-type="mobile">MOBILE</div>
-          <div class="services__button" data-type="design">DESIGN</div>
+          </button>
+          <button
+            type="button"
+            class="services__button"
+            data-type="back-end"
+            aria-pressed="false"
+          >
+            BACK-END
+          </button>
+          <button
+            type="button"
+            class="services__button"
+            data-type="mobile"
+            aria-pressed="false"
+          >
+            MOBILE
+          </button>
+          <button
+            type="button"
+            class="services__button"
+            data-type="design"
+            aria-pressed="false"
+          >
+            DESIGN
+          </button>
         </div>
       </div>
       <div class="services__main"></div>
     </section>
+    </main>
 
     <footer class="footer">
       <div class="footer__absolute">
@@ -197,8 +222,9 @@
             <a
               href="https://github.com/vitorlima-vsl"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="footer__social"
+              aria-label="GitHub"
             >
               <div class="footer__line"></div>
               <div class="footer__play">
@@ -209,8 +235,9 @@
             <a
               href="https://www.linkedin.com/in/vitorlima-vsl/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="footer__social"
+              aria-label="LinkedIn"
             >
               <div class="footer__line"></div>
               <div class="footer__play">
@@ -221,8 +248,9 @@
             <a
               href="https://www.instagram.com/vitorlima.vsl/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="footer__social"
+              aria-label="Instagram"
             >
               <div class="footer__line"></div>
               <div class="footer__play">
@@ -233,6 +261,7 @@
             <a
               href="mailto:vitorsawada2002@gmail.com"
               class="footer__social"
+              aria-label="E-mail"
             >
               <div class="footer__line"></div>
               <div class="footer__play">
