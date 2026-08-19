@@ -11,7 +11,6 @@ const projects = [
     link: "https://ssa.saocristovao.se.gov.br/",
     featured: true,
   },
-    
   {
     type: "FULLSTACK",
     icon: "fa-globe",
@@ -20,8 +19,9 @@ const projects = [
     tags: ["REACT", "CSS", "TYPESCRIPT"],
     img: "img/kipperfit-web.png",
     link: "https://kipperfit.com.br/",
+    featured: true,
   },
-    {
+  {
     type: "WEB SITE",
     icon: "fa-briefcase",
     title: "Emprega+",
@@ -48,10 +48,7 @@ const projects = [
     tags: ["VUE", "LARAVEL", "INERTIA", "PHP"],
     img: "img/e-commerce.png",
     link: "https://github.com/AnthonyAragao/e-commerce",
-    featured: true,
   },
-
-  
   {
     type: "SOCIAL",
     icon: "fa-hand-holding-heart",
@@ -106,15 +103,13 @@ const projects = [
     img: "img/vitorlima-vsl.png",
     link: "https://github.com/vitorlima-vsl",
   },
-  
-
 ];
 
 function projectCard(p, index) {
   const num = String(index + 1).padStart(2, "0");
   const tags = p.tags.map((t) => `<span>${t}</span>`).join("");
   return `
-    <a href="${p.link}" target="_blank" rel="noopener" class="project__card">
+    <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project__card">
       <div class="project__header">
         <div class="project__type">
           <span>${num}</span>
@@ -144,8 +139,8 @@ function projectCard(p, index) {
   `;
 }
 
-// Featured order requested: Portal de Aplicações, Emprega+, E-commerce
-const featuredOrder = ["Portal de Aplicações",  "KipperFit", "Emprega+"];
+// Destaques na ordem: Portal de Aplicações, KipperFit, Emprega+
+const featuredOrder = ["Portal de Aplicações", "KipperFit", "Emprega+"];
 const featured = featuredOrder
   .map((t) => projects.find((p) => p.title === t))
   .filter(Boolean);
@@ -173,7 +168,7 @@ function scrollToProjects() {
 
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-action]");
-  if (!btn) return;
+  if (!btn || !featuredView || !allView) return;
   const action = btn.getAttribute("data-action");
   if (action === "show-all") {
     featuredView.hidden = true;

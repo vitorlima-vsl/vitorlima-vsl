@@ -56,7 +56,7 @@
   background-color: var(--clr-blue-border);
   border: 3px solid var(--clr-blue-dark);
   border-radius: 1.6rem;
-  overflow: hidden;
+  overflow: visible;
 
   position: relative;
   z-index: 1000;
@@ -69,7 +69,6 @@
   display: block;
   width: 103%;
   height: var(--footer-panel-height);
-  height: 70%;
   background-color: var(--clr-blue-bg);
   border: 3px solid var(--clr-blue-dark);
   border-top: 0;
@@ -80,37 +79,6 @@
   top: 42.7%;
   transform: translate(-50%, 0);
   z-index: 1;
-}
-
-/* Abas laterais que ligam o painel claro ao fundo da página (valores originais SET4) */
-/* .footer__background::before,
-.footer__background::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  
-  background-color: var(--clr-blue-);
-
-  position: absolute;
-  top: -35px;
-  z-index: 999;
-} */
-
-.footer__background::before {
-
-  border-right:  3px solid red;
-  border-top: 3px solid red;
-  left: -53px;
-  top: 0%;
-  border-radius: 100%;
-  border-top-right-radius: 30%;
-  border-bottom-right-radius: 0%;
-  border-top-left-radius: 0%;
-}
-
-.footer__background::after {
-  right: -35px;
 }
 
 .footer__header span {
@@ -139,6 +107,7 @@
   align-items: center;
   justify-content: center;
 
+  position: relative;
   text-decoration: none;
 }
 
@@ -167,8 +136,11 @@
   background-color: var(--clr-blue-dark);
 
   position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
   z-index: 40;
-  transition: all 0.9s;
+  transition: height 0.9s;
 }
 
 .footer__play {
@@ -184,9 +156,11 @@
   opacity: 0;
 
   position: absolute;
+  left: 50%;
   bottom: 30px;
+  transform: translateX(-50%);
   z-index: 60;
-  transition: all .5s;
+  transition: bottom 0.5s, opacity 0.5s;
 }
 
 .footer__social:first-child > .footer__icon {
@@ -205,10 +179,6 @@
   background-color: #000;
 }
 
-.footer__social:nth-child(5) > .footer__icon {
-  background-color: #db3030;
-}
-
 .footer__social:first-child > .footer__play {
   color: #e64080;
 }
@@ -223,10 +193,6 @@
 
 .footer__social:nth-child(4) > .footer__play {
   color: #000;
-}
-
-.footer__social:nth-child(5) > .footer__play {
-  color: #e64040;
 }
 
 .footer__social:hover .footer__line {

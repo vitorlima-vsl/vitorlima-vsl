@@ -155,10 +155,12 @@ servicesButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const type = btn.getAttribute("data-type");
 
-    servicesButtons.forEach((b) =>
-      b.classList.remove("services__button--active")
-    );
+    servicesButtons.forEach((b) => {
+      b.classList.remove("services__button--active");
+      b.setAttribute("aria-pressed", "false");
+    });
     btn.classList.add("services__button--active");
+    btn.setAttribute("aria-pressed", "true");
 
     handleService(type);
   });

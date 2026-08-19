@@ -2,18 +2,19 @@
 @import url(home.css);
 @import url(project.css);
 @import url(services.css);
-@import url(post.css);
 @import url(footer.css);
 @import url(responsive.css);
 
 @font-face {
   font-family: "Gilroy";
   src: url("../font/Gilroy.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Anzeigen";
   src: url("../font/Anzeigen.otf");
+  font-display: swap;
 }
 
 :root {
