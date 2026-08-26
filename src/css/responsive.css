@@ -484,9 +484,12 @@ html, body {
     justify-content: center;
     gap: 1.6rem;
   }
+  .footer__social,
   .footer__icon {
     width: 5rem;
     height: 5rem;
+  }
+  .footer__icon {
     font-size: 2rem;
   }
   .footer__navigation .header__list {
