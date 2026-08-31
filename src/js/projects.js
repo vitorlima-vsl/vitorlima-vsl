@@ -26,7 +26,7 @@ const projects = [
         icon: "fa-brands fa-apple",
       },
       {
-        label: "Landing page",
+        label: "Web page",
         url: "https://vitorlima-vsl.github.io/kipperfit-web/",
         icon: "fa-solid fa-globe",
       },
@@ -117,15 +117,6 @@ const projects = [
     tags: ["LARAVEL", "TAILWIND", "MYSQL"],
     img: "img/agenda.png",
     link: "https://github.com/vitorlima-vsl/agenda",
-  },
-  {
-    type: "LANDING PAGE",
-    icon: "fa-microchip",
-    title: "Index Technology",
-    desc: "Meu primeiro projeto — landing page de uma loja de eletrônicos.",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
-    img: "img/index_tec.svg",
-    link: "https://vitorlima-vsl.github.io/index_technology/",
   },
   {
     type: "PAINEL",

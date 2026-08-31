@@ -22,7 +22,7 @@ const skills = {
       name: "Tailwind & CSS",
       feats: [
         { icon: "fa-solid fa-mobile-screen-button", text: "Responsividade" },
-        { icon: "fa-solid fa-palette", text: "Design System" },
+        { icon: "fa-solid fa-palette", text: "Sistema de design" },
       ],
     },
     {
@@ -81,7 +81,7 @@ const skills = {
       icon: "fa-solid fa-mobile-screen-button",
       name: "Layouts Mobile",
       feats: [
-        { icon: "fa-solid fa-hand-pointer", text: "UX Touch-First" },
+        { icon: "fa-solid fa-hand-pointer", text: "UX para toque" },
         { icon: "fa-solid fa-expand", text: "Telas Adaptáveis" },
       ],
     },
@@ -90,7 +90,7 @@ const skills = {
       name: "Consumo de APIs",
       feats: [
         { icon: "fa-solid fa-cloud-arrow-down", text: "Dados em Tempo Real" },
-        { icon: "fa-solid fa-key", text: "Auth Mobile" },
+        { icon: "fa-solid fa-key", text: "Autenticação mobile" },
       ],
     },
   ],
