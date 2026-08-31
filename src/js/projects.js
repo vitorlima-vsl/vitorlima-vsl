@@ -74,15 +74,6 @@ const projects = [
     link: "https://casafeliz.saocristovao.se.gov.br/requisitos",
   },
   {
-    type: "APLICATIVO WEB",
-    icon: "fa-user-tie",
-    title: "Banco de Currículos",
-    desc: "Banco de currículos da cidade de São Cristóvão — vagas e cursos.",
-    tags: ["LARAVEL", "TAILWIND", "PHP"],
-    img: "img/banco-curriculos-portal.png",
-    link: "https://portaldecurriculo.saocristovao.se.gov.br/login",
-  },
-  {
     type: "PORTAL",
     icon: "fa-landmark",
     title: "Portal da Prefeitura",
