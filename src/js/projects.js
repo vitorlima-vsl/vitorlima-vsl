@@ -1,5 +1,5 @@
-// Projects data — pulled from the vitorlima-vsl portfolio.
-// Each card keeps the numbered/tagged card style with the hover button.
+// Dados dos projetos do portfólio.
+// Cada card mantém o estilo numerado com botão no hover.
 const projects = [
   {
     type: "PORTAL",
@@ -11,21 +11,33 @@ const projects = [
     link: "https://ssa.saocristovao.se.gov.br/",
     featured: true,
   },
-    
   {
-    type: "FULLSTACK",
-    icon: "fa-globe",
+    type: "MÓVEL",
+    icon: "fa-mobile-screen-button",
     title: "KipperFit",
-    desc: "Landing page e Aplicativo KipperFit.",
-    tags: ["REACT", "CSS", "TYPESCRIPT"],
+    desc: "Aplicativo para personal trainers — gestão de alunos, treinos, avaliações e progresso.",
+    tags: ["REACT NATIVE", "MOBILE", "TYPESCRIPT"],
     img: "img/kipperfit-web.png",
-    link: "https://kipperfit.com.br/",
+    link: "https://apps.apple.com/br/app/kipperfit/id6787291011",
+    links: [
+      {
+        label: "App Store",
+        url: "https://apps.apple.com/br/app/kipperfit/id6787291011",
+        icon: "fa-brands fa-apple",
+      },
+      {
+        label: "Web page",
+        url: "https://vitorlima-vsl.github.io/kipperfit-web/",
+        icon: "fa-solid fa-globe",
+      },
+    ],
+    featured: true,
   },
-    {
-    type: "WEB SITE",
+  {
+    type: "SITE",
     icon: "fa-briefcase",
     title: "Emprega+",
-    desc: "Banco de Currículos e Cursos de uma cidade.",
+    desc: "Plataforma de emprego e cursos da cidade de São Cristóvão.",
     tags: ["TAILWIND", "CSS", "HTML"],
     img: "img/banco-de-curriculos.png",
     link: "https://empregamais.saocristovao.se.gov.br/",
@@ -35,16 +47,16 @@ const projects = [
     type: "LANDING PAGE",
     icon: "fa-globe",
     title: "Zdoc",
-    desc: "Proposta de Landing Page da Zdoc.",
+    desc: "Proposta de landing page da Zdoc.",
     tags: ["VUE", "TAILWIND", "TYPESCRIPT"],
     img: "img/zdoc.png",
     link: "https://zdoc-vitorlima-vsls-projects.vercel.app/",
   },
   {
-    type: "WEB APP",
+    type: "APLICATIVO WEB",
     icon: "fa-cart-shopping",
     title: "E-commerce",
-    desc: "E-commerce em andamento, em conjunto com Anthony Aragão.",
+    desc: "Loja virtual em andamento, em conjunto com Anthony Aragão.",
     tags: ["VUE", "LARAVEL", "INERTIA", "PHP"],
     img: "img/e-commerce.png",
     link: "https://github.com/AnthonyAragao/e-commerce",
@@ -53,7 +65,7 @@ const projects = [
 
   
   {
-    type: "SOCIAL",
+    type: "PROGRAMA SOCIAL",
     icon: "fa-hand-holding-heart",
     title: "Casa Feliz",
     desc: "Programa beneficente para ajudar famílias carentes.",
@@ -62,37 +74,55 @@ const projects = [
     link: "https://casafeliz.saocristovao.se.gov.br/requisitos",
   },
   {
-    type: "WEB APP",
+    type: "PORTAL",
+    icon: "fa-landmark",
+    title: "Portal da Prefeitura",
+    desc: "Portal oficial da Prefeitura de São Cristóvão.",
+    tags: ["LARAVEL", "TAILWIND", "PHP"],
+    img: "img/portal-prefeitura.png",
+    link: "https://www.saocristovao.se.gov.br/",
+  },
+  {
+    type: "APLICATIVO WEB",
+    icon: "fa-masks-theater",
+    title: "Catálogo Cultural",
+    desc: "Sistema para catalogar projetos culturais e seleção de eventos.",
+    tags: ["LARAVEL", "TAILWIND", "PHP"],
+    img: "img/catalogo-cultural.png",
+    link: "https://mapacultural.saocristovao.se.gov.br/login",
+  },
+  {
+    type: "APLICATIVO WEB",
+    icon: "fa-chart-line",
+    title: "Transparência",
+    desc: "Sistema de transparência dos gastos municipais.",
+    tags: ["LARAVEL", "JAVASCRIPT", "PHP"],
+    img: "img/transparencia.png",
+    link: "https://transparencia.saocristovao.se.gov.br/",
+  },
+  {
+    type: "APLICATIVO WEB",
     icon: "fa-file-lines",
     title: "Formulários",
-    desc: "Front-end reativo a uma API de formulários, automatizando a criação de formulários.",
+    desc: "Interface reativa a uma API de formulários, automatizando a criação de formulários.",
     tags: ["VUE", "API", "TAILWIND"],
     img: "img/formularios.png",
     link: "https://credenciamentodeambulante.saocristovao.se.gov.br/login",
   },
   {
-    type: "FULLSTACK",
+    type: "FULL STACK",
     icon: "fa-calendar-days",
     title: "Agenda",
-    desc: "Projeto back-end e front-end 100% individual, estudo de Banco de Dados e Laravel.",
+    desc: "Projeto back-end e front-end 100% individual — estudo de banco de dados e Laravel.",
     tags: ["LARAVEL", "TAILWIND", "MYSQL"],
     img: "img/agenda.png",
     link: "https://github.com/vitorlima-vsl/agenda",
   },
   {
-    type: "LANDING PAGE",
-    icon: "fa-microchip",
-    title: "Index Technology",
-    desc: "Meu primeiro projeto — landing page de uma loja de eletrônicos.",
-    tags: ["HTML", "CSS", "JAVASCRIPT"],
-    img: "img/index_tec.svg",
-    link: "https://vitorlima-vsl.github.io/index_technology/",
-  },
-  {
-    type: "DASHBOARD",
+    type: "PAINEL",
     icon: "fa-table-columns",
     title: "Dashboard",
-    desc: "Template-esqueleto para projetos com tabelas, formulários e gráficos.",
+    desc: "Modelo base para projetos com tabelas, formulários e gráficos.",
     tags: ["VUE", "TAILWIND"],
     img: "img/dashboard.svg",
     link: "https://github.com/vitorlima-vsl",
@@ -104,7 +134,7 @@ const projects = [
     desc: "Meu portfólio, onde apresento meus projetos e habilidades.",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     img: "img/vitorlima-vsl.png",
-    link: "https://github.com/vitorlima-vsl",
+    link: "https://vitorlima-vsl.github.io/vitorlima-vsl/",
   },
   
 
@@ -113,8 +143,31 @@ const projects = [
 function projectCard(p, index) {
   const num = String(index + 1).padStart(2, "0");
   const tags = p.tags.map((t) => `<span>${t}</span>`).join("");
+  const links = p.links ?? [
+    { label: "VER PROJETO", url: p.link, icon: "fa-solid fa-play" },
+  ];
+
+  const actions = links
+    .map(
+      (l, i) => `
+    <a
+      href="${l.url}"
+      target="_blank"
+      rel="noopener"
+      class="project__button${links.length > 1 ? " project__button--multi" : ""}"
+      aria-label="${l.label}"
+      title="${l.label}"
+    >
+      <div class="project__button-square"></div>
+      <i class="${l.icon}"></i>
+      <span>${l.label.toUpperCase()}</span>
+    </a>
+  `
+    )
+    .join("");
+
   return `
-    <a href="${p.link}" target="_blank" rel="noopener" class="project__card">
+    <article class="project__card${links.length > 1 ? " project__card--multi" : ""}">
       <div class="project__header">
         <div class="project__type">
           <span>${num}</span>
@@ -135,16 +188,12 @@ function projectCard(p, index) {
         <div class="project__tags">${tags}</div>
       </div>
 
-      <div class="project__button">
-        <div class="project__button-square"></div>
-        <i class="fa-solid fa-play"></i>
-        <span>VER PROJETO</span>
-      </div>
-    </a>
+      <div class="project__actions">${actions}</div>
+    </article>
   `;
 }
 
-// Featured order requested: Portal de Aplicações, Emprega+, E-commerce
+// Ordem dos destaques: Portal de Aplicações, KipperFit, Emprega+
 const featuredOrder = ["Portal de Aplicações",  "KipperFit", "Emprega+"];
 const featured = featuredOrder
   .map((t) => projects.find((p) => p.title === t))
@@ -160,7 +209,7 @@ if (allGrid) {
   allGrid.innerHTML = projects.map(projectCard).join("");
 }
 
-// ---- toggle between featured view and full view (same page) ----
+// Alterna entre a view de destaques e a lista completa
 const featuredView = document.querySelector(".project__view--featured");
 const allView = document.querySelector(".project__view--all");
 const section = document.getElementById("projetos");

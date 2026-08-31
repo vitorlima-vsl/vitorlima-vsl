@@ -122,6 +122,13 @@
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
+.project__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 2.8rem 3.6rem;
+}
+
 .project__card:hover {
   transform: translateY(-8px);
   border-color: var(--clr-yellow);
@@ -261,7 +268,6 @@
 .project__button {
   width: 5.5rem;
   height: 5.5rem;
-  margin: 2.8rem 3.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +281,10 @@
 
   position: relative;
   transition: all 0.5s;
+}
+
+.project__card--multi .project__button--multi {
+  flex-shrink: 0;
 }
 
 .project__button i {
@@ -316,6 +326,10 @@
 
   border-radius: 1.2rem;
   font-size: 1rem;
+}
+
+.project__card--multi:hover .project__button--multi {
+  width: 13rem;
 }
 
 .project__card:hover .project__button .project__button-square {
