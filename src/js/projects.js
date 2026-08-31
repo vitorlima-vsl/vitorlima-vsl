@@ -11,17 +11,29 @@ const projects = [
     link: "https://ssa.saocristovao.se.gov.br/",
     featured: true,
   },
-    
   {
-    type: "FULLSTACK",
-    icon: "fa-globe",
+    type: "MOBILE",
+    icon: "fa-mobile-screen-button",
     title: "KipperFit",
-    desc: "Landing page e Aplicativo KipperFit.",
-    tags: ["REACT", "CSS", "TYPESCRIPT"],
+    desc: "App para personal trainers — gestão de alunos, treinos, avaliações e progresso.",
+    tags: ["REACT NATIVE", "MOBILE", "TYPESCRIPT"],
     img: "img/kipperfit-web.png",
-    link: "https://kipperfit.com.br/",
+    link: "https://apps.apple.com/br/app/kipperfit/id6787291011",
+    links: [
+      {
+        label: "App Store",
+        url: "https://apps.apple.com/br/app/kipperfit/id6787291011",
+        icon: "fa-brands fa-apple",
+      },
+      {
+        label: "Site",
+        url: "https://vitorlima-vsl.github.io/kipperfit-web/",
+        icon: "fa-solid fa-globe",
+      },
+    ],
+    featured: true,
   },
-    {
+  {
     type: "WEB SITE",
     icon: "fa-briefcase",
     title: "Emprega+",
@@ -60,6 +72,51 @@ const projects = [
     tags: ["VUE", "LARAVEL", "API"],
     img: "img/casa-feliz.png",
     link: "https://casafeliz.saocristovao.se.gov.br/requisitos",
+  },
+  {
+    type: "WEB APP",
+    icon: "fa-user-tie",
+    title: "Banco de Currículos",
+    desc: "Banco de currículos da cidade de São Cristóvão — vagas e cursos.",
+    tags: ["LARAVEL", "TAILWIND", "PHP"],
+    img: "img/banco-curriculos-portal.png",
+    link: "https://portaldecurriculo.saocristovao.se.gov.br/login",
+  },
+  {
+    type: "PORTAL",
+    icon: "fa-landmark",
+    title: "Portal da Prefeitura",
+    desc: "Portal oficial da Prefeitura de São Cristóvão.",
+    tags: ["LARAVEL", "TAILWIND", "PHP"],
+    img: "img/casa-feliz.png",
+    link: "https://www.saocristovao.se.gov.br/",
+  },
+  {
+    type: "WEB APP",
+    icon: "fa-masks-theater",
+    title: "Catálogo Cultural",
+    desc: "Sistema para catalogar projetos culturais e seleção de eventos.",
+    tags: ["LARAVEL", "TAILWIND", "PHP"],
+    img: "img/formularios.png",
+    link: "https://mapacultural.saocristovao.se.gov.br/login",
+  },
+  {
+    type: "WEB APP",
+    icon: "fa-chart-line",
+    title: "Transparência",
+    desc: "Sistema de transparência dos gastos municipais.",
+    tags: ["LARAVEL", "JAVASCRIPT", "PHP"],
+    img: "img/dashboard.svg",
+    link: "https://transparencia.saocristovao.se.gov.br/municipio",
+  },
+  {
+    type: "LANDING PAGE",
+    icon: "fa-file-lines",
+    title: "Landing Banco de Currículos",
+    desc: "Landing page introdutória do banco de currículos, idealizada como Emprega+.",
+    tags: ["TAILWIND", "HTML", "CSS"],
+    img: "img/landpage-banco.png",
+    link: "https://vitorlima-vsl.github.io/landpage_banco/pages/",
   },
   {
     type: "WEB APP",
@@ -104,7 +161,7 @@ const projects = [
     desc: "Meu portfólio, onde apresento meus projetos e habilidades.",
     tags: ["HTML", "CSS", "JAVASCRIPT"],
     img: "img/vitorlima-vsl.png",
-    link: "https://github.com/vitorlima-vsl",
+    link: "https://vitorlima-vsl.github.io/vitorlima-vsl/",
   },
   
 
@@ -113,8 +170,31 @@ const projects = [
 function projectCard(p, index) {
   const num = String(index + 1).padStart(2, "0");
   const tags = p.tags.map((t) => `<span>${t}</span>`).join("");
+  const links = p.links ?? [
+    { label: "VER PROJETO", url: p.link, icon: "fa-solid fa-play" },
+  ];
+
+  const actions = links
+    .map(
+      (l, i) => `
+    <a
+      href="${l.url}"
+      target="_blank"
+      rel="noopener"
+      class="project__button${links.length > 1 ? " project__button--multi" : ""}"
+      aria-label="${l.label}"
+      title="${l.label}"
+    >
+      <div class="project__button-square"></div>
+      <i class="${l.icon}"></i>
+      <span>${l.label.toUpperCase()}</span>
+    </a>
+  `
+    )
+    .join("");
+
   return `
-    <a href="${p.link}" target="_blank" rel="noopener" class="project__card">
+    <article class="project__card${links.length > 1 ? " project__card--multi" : ""}">
       <div class="project__header">
         <div class="project__type">
           <span>${num}</span>
@@ -135,12 +215,8 @@ function projectCard(p, index) {
         <div class="project__tags">${tags}</div>
       </div>
 
-      <div class="project__button">
-        <div class="project__button-square"></div>
-        <i class="fa-solid fa-play"></i>
-        <span>VER PROJETO</span>
-      </div>
-    </a>
+      <div class="project__actions">${actions}</div>
+    </article>
   `;
 }
 
