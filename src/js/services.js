@@ -1,4 +1,4 @@
-// Skills section — dynamic tabs rendered into the services card layout.
+// Seção de habilidades — abas dinâmicas no layout de cards.
 const skills = {
   "front-end": [
     {
@@ -13,7 +13,7 @@ const skills = {
       icon: "fa-brands fa-react",
       name: "React",
       feats: [
-        { icon: "fa-solid fa-diagram-project", text: "Hooks & State" },
+        { icon: "fa-solid fa-diagram-project", text: "Hooks e estado" },
         { icon: "fa-solid fa-bolt", text: "Componentes Modernos" },
       ],
     },
@@ -164,7 +164,7 @@ servicesButtons.forEach((btn) => {
   });
 });
 
-// render the default (active) tab on load
+// Renderiza a aba ativa ao carregar a página
 const initial =
   document.querySelector(".services__button--active")?.getAttribute("data-type") ||
   "front-end";
